@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>모니터링</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" include-html="/base/html/common/header.html"></header>
+    <!-- //header -->
+
+    <main class="container">
+      <section class="monitering">
+        <article class="ly-left" include-html="/base/html/common/monitering_left.html"></article>
+        <!-- //ly-left -->
+
+        <article class="ly-center" include-html="/base/html/common/monitering_center.html"></article>
+        <!-- //ly-center -->
+
+        <article class="ly-right">
+          <div class="control-header">
+            <span class="select-choice">
+              <i class="ic-info"></i>
+              <select class="selectbox">
+                <option selected>Information</option>
+                <option>검지 정보</option>
+                <option>연계 동작 상태</option>
+                <option>ROI 설정</option>
+                <option>객체 인식 파라메터 설정</option>
+                <option>파일 업데이트</option>
+              </select>
+            </span>
+            <span class="switch-group">
+              <em class="txt">ROI 보기</em>
+              <label class="switch">
+                <input type="checkbox" class="hidden">
+                <span class="slider"></span>
+              </label>
+            </span>
+          </div>
+          <!-- //control-header -->
+
+          <div class="control-content">
+            <div class="tbl-sticky" data-componant="camera-state">
+              <div class="tbl-sticky-inner">
+                <header class="header-bg"></header>
+                <table>
+                  <colgroup>
+                    <col style="width:20%;">
+                    <col style="width:50%;">
+                    <col style="width:30%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th><span style="width:20%;">채널</span></th>
+                      <th><span style="width:50%;">IP주소</span></th>
+                      <th><span style="width:30%;">상태</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>192.168.172.125</td>
+                      <td>객체 인식중</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>192.168.172.125</td>
+                      <td>인식 준비중</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>192.168.172.125</td>
+                      <td>연결 불가</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>192.168.172.125</td>
+                      <td>인식 준비중</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>192.168.172.125</td>
+                      <td>연결 불가</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-sticky-inner -->
+            </div>
+            <!-- //tbl-sticky -->
+            <div class="unit" data-componant="camera-info">
+              <header class="unit-header">
+                <span class="tit">카메라 정보</span>
+                <button type="button" class="btn-save"><span class="hidden">저장</span></button>
+              </header>
+              <div class="unit-content">
+                <div class="tbl-border-none">
+                  <table>
+                    <colgroup>
+                      <col style="width:30%;">
+                      <col style="width:70%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>채널</th>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <th>IP주소</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>RTSP주소</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>카메라 ID</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>카메라 명</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>카메라 방향</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>화면 해상도</th>
+                        <td>
+                          <span class="input-value-group">
+                            <input type="text" class="input-txt">
+                            <i>X</i>
+                            <input type="text" class="input-txt">
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl-border-none -->
+              </div>
+              <!-- //unit-content -->
+            </div>
+            <!-- //unit -->
+            <div class="unit" data-componant="branch-info">
+              <header class="unit-header">
+                <span class="tit">지점 정보 (채널 공통)</span>
+                <button type="button" class="btn-save"><span class="hidden">저장</span></button>
+              </header>
+              <div class="unit-content">
+                <div class="tbl-border-none">
+                  <table>
+                    <colgroup>
+                      <col style="width:25%;">
+                      <col style="width:75%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>횡단보도 ID</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>횡단보도 명</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                      <tr>
+                        <th>센터IP</th>
+                        <td><input type="text" class="input-txt"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl-border-none -->
+              </div>
+              <!-- //unit-content -->
+            </div>
+            <!-- //unit -->
+          </div>
+          <!-- //control-content -->
+        </article>
+        <!-- //ly-right -->
+
+      </section>
+      <!-- //monitering -->
+    </main>
+    <!-- //container -->
+
+    <footer>
+      <p class="copylight">Copyright 2021, BYDA CO, LTD ALL rights reserved.</p>
+    </footer>
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>
