@@ -123,7 +123,6 @@ a, span, em, button, label, i, b, strong {
   border-radius: 10px;
   border-color: transparent;
   border-style: solid;
-  border-width: calc(10 / 3);
   background-clip: padding-box;
 }
 
@@ -202,6 +201,10 @@ a, span, em, button, label, i, b, strong {
 
 .pdb10 {
   padding-bottom: 10px !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
 }
 
 .bg-red {
@@ -315,6 +318,11 @@ a, span, em, button, label, i, b, strong {
       -ms-flex: 1;
           flex: 1;
   background: #162128;
+}
+
+.container.bg-white {
+  overflow-y: auto;
+  padding: 12px;
 }
 
 footer {
@@ -762,6 +770,44 @@ footer .copylight {
   background: #2d85c5;
 }
 
+.filter-group {
+  padding: 18px 0 18px 24px;
+  border: 1px solid #c4c4c4;
+}
+
+.filter-group .tit {
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.tbl-list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 24px 0 12px;
+  padding: 0 17px 0 12px;
+}
+
+.tbl-list-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tbl-list-header .btn-inline-group {
+  margin-left: auto;
+}
+
+.tbl-list-header .btn-inline-group .btn-question {
+  margin-right: 32px;
+}
+
 /* ###############################
     swiper style 수정
 ################################## */
@@ -855,12 +901,62 @@ footer .copylight {
   background-size: contain;
 }
 
+.btn-save.type2 {
+  background-image: url(/base/images/btn_save2.png);
+  background-size: 24px;
+}
+
 .btn-delete {
   width: 24px;
   height: 24px;
   background: url(/base/images/btn_delete.png) no-repeat 0 0;
   background-size: contain;
   vertical-align: middle;
+}
+
+.btn-delete.type2 {
+  background-image: url(/base/images/btn_delete2.png);
+  background-size: 24px;
+}
+
+.btn-delete.type2:disabled {
+  opacity: 0.3;
+}
+
+.btn-question {
+  width: 24px;
+  height: 24px;
+  background: url(/base/images/btn_question.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-plus {
+  width: 24px;
+  height: 24px;
+  background: url(/base/images/btn_plus.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-plus:disabled {
+  opacity: 0.3;
+}
+
+.btn-edit {
+  width: 24px;
+  height: 24px;
+  background: url(/base/images/btn_edit.png) no-repeat 0 0;
+  background-size: 24px;
+}
+
+.btn-edit:disabled {
+  opacity: 0.3;
+}
+
+.btn-close {
+  width: 35px;
+  height: 35px;
+  background: url(/base/images/btn_close_black.png) no-repeat 0 0;
+  background-size: contain;
 }
 
 .btn-default {
@@ -927,6 +1023,11 @@ footer .copylight {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background: #fff;
+}
+
+.input-txt.type2 {
+  height: 40px;
+  border-radius: 0;
 }
 
 .input-value-group {
@@ -1118,6 +1219,16 @@ footer .copylight {
   background-size: 12px 9px;
 }
 
+.selectbox:disabled {
+  opacity: 0.5;
+}
+
+.selectbox.bordered {
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border: 1px solid #c4c4c4;
+}
+
 /* ###############################
     모니터링 우측 컴포넌트
 ################################## */
@@ -1219,6 +1330,37 @@ footer .copylight {
 
 .tbl-bordered-bot tbody tr:not(:first-child) td {
   border-top: 1px solid #c4c4c4;
+}
+
+.tbl-single-bordered thead th {
+  padding: 11px 0;
+  font-weight: 400;
+  color: #fff;
+  background: #2d85c5;
+}
+
+.tbl-single-bordered thead th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.tbl-single-bordered thead th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.tbl-single-bordered tbody {
+  border: 1px solid #c4c4c4;
+  border-top: 0;
+}
+
+.tbl-single-bordered tbody td {
+  padding: 15px 0;
+  line-height: 39px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.tbl-single-bordered tbody td [class*="btn-"] {
+  vertical-align: middle;
 }
 
 .tbl-sticky {
