@@ -27,9 +27,7 @@ function cmmnui () {
         return;
       }
     });
-    // $(document).on('mouseleave', '.gnb .depth2', function () {
-    //   $('.gnb .depth2').stop().slideUp(200);
-    // });
+    
     $(document).on('mouseleave', $gnbSelector, function () {
       $(this).children('.depth2').stop().slideUp(200);
     });
