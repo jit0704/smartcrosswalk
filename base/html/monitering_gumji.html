@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>모니터링</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" include-html="/base/html/common/header.html"></header>
+    <!-- //header -->
+
+    <main class="container">
+      <section class="monitering">
+        <article class="ly-left" include-html="/base/html/common/monitering_left.html"></article>
+        <!-- //ly-left -->
+
+        <article class="ly-center" include-html="/base/html/common/monitering_center.html"></article>
+        <!-- //ly-center -->
+
+        <article class="ly-right">
+          <div class="control-header">
+            <span class="select-choice">
+              <i class="ic-info"></i>
+              <select class="selectbox">
+                <option>Information</option>
+                <option selected>검지 정보</option>
+                <option>연계 동작 상태</option>
+                <option>ROI 설정</option>
+                <option>객체 인식 파라메터 설정</option>
+                <option>파일 업데이트</option>
+              </select>
+            </span>
+            <span class="switch-group">
+              <em class="txt">ROI 보기</em>
+              <label class="switch">
+                <input type="checkbox" class="hidden">
+                <span class="slider"></span>
+              </label>
+            </span>
+          </div>
+          <!-- //control-header -->
+
+          <div class="control-content">
+            <div class="tab-group">
+              <div class="tab-nav">
+                <a href="#vehicle" class="active">차량</a>
+                <a href="#walker">보행자</a>
+              </div>
+              <!-- //tab-nav -->
+              <div class="tab-container">
+                <div id="vehicle" class="tab-content">
+                  <div class="unit type3" data-componant="traffic">
+                    <header class="unit-header">
+                      <span class="tit">통행량</span>
+                    </header>
+                    <div class="unit-content">
+                      <div class="tbl-border-none type-data">
+                        <table>
+                          <colgroup>
+                            <col style="width:25%;">
+                            <col style="width:25%;">
+                            <col style="width:25%;">
+                            <col style="width:25%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>진입로1</th>
+                              <th>진입로2</th>
+                              <th>진입로3</th>
+                              <th>진입로4</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><span>40</span></td>
+                              <td><span>40</span></td>
+                              <td><span>40</span></td>
+                              <td><span>0</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- //tbl-border-none -->
+                    </div>
+                    <!-- //unit-content -->
+                  </div>
+                  <!-- //unit -->
+
+                  <div class="unit type3" data-componant="gumji-info">
+                    <header class="unit-header">
+                      <span class="tit">실시간 검지 정보</span>
+                    </header>
+                    <div class="unit-content">
+                      <div class="tbl-sticky">
+                        <div class="tbl-sticky-inner">
+                          <header class="header-bg"></header>
+                          <table class="tbl-bordered-bot">
+                            <colgroup>
+                              <col style="width:16%;">
+                              <col style="width:37%;">
+                              <col style="width:47%;">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th><span style="width:16%;">ID</span></th>
+                                <th><span style="width:37%;">위치</span></th>
+                                <th><span style="width:47%;">비고</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>진입영역</td>
+                                <td>1차로</td>
+                              </tr>
+                              <tr>
+                                <td>0</td>
+                                <td>진입영역</td>
+                                <td>1차로</td>
+                              </tr>
+                              <tr>
+                                <td>0</td>
+                                <td>정지영역</td>
+                                <td>1차로, 정지선 침범</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- //tbl-sticky-inner -->
+                      </div>
+                      <!-- //tbl-sticky -->
+                    </div>
+                    <!-- //unit-content -->
+                  </div>
+                  <!-- //unit -->
+                </div>
+                <!-- //tab-content -->
+              </div>
+              <!-- //tab-container -->
+            </div>
+            <!-- //tab-group -->
+          </div>
+          <!-- //control-content -->
+        </article>
+        <!-- //ly-right -->
+
+      </section>
+      <!-- //monitering -->
+    </main>
+    <!-- //container -->
+
+    <footer include-html="/base/html/common/footer.html"></footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>

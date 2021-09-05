@@ -43,80 +43,85 @@
         </div>
         <!-- //tbl-list-header -->
 
-        <div class="tbl-single-bordered">
-          <table>
-            <!-- 210829 col width 값 수정 -->
-            <colgroup>
-              <col style="width:14%">
-              <col style="width:14%">
-              <col>
-              <col style="width:22%">
-              <col style="width:2%">
-              <col style="width:4%">
-            </colgroup>
-            <thead>
-              <tr>
-                <th>종류</th>
-                <th>코드</th>
-                <th>동작</th>
-                <th>수정일시</th>
-                <th>편집</th>
-                <th>삭제</th>
-              </tr>
-            </thead>
-            <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
-            <tbody>
-              <tr>
-                <td>바닥유도등</td>
-                <td>code.gl.1</td>
-                <td>소등</td>
-                <td>2021-06-07 12:31:33</td>
-                <td>
-                  <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                </td>
-                <td>
-                  <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td>바닥유도등</td>
-                <td>code.gl.1</td>
-                <td>소등</td>
-                <td>2021-06-07 12:31:33</td>
-                <td>
-                  <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                </td>
-                <td>
-                  <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
-                </td>
-              </tr>
-              <tr class="add-row"> <!-- 210829 행 추가시 add-row 클래스 추가 -->
-                <td>
-                  <select class="selectbox bordered" style="min-width:180px;">
-                    <option>VMS</option>
-                    <option>음성안내 장치</option>
-                    <option>집중조명</option>
-                    <option>바닥유도등</option>
-                  </select>
-                </td>
-                <td>
-                  <input type="text" class="input-txt type2" style="width:180px;">
-                </td>
-                <td>
-                  <input type="text" class="input-txt type2" style="width:750px;">
-                </td>
-                <td></td>
-                <td>
-                  <button type="button" class="btn-save type2"><span class="hidden">저장</span></button>
-                </td>
-                <td>
-                  <button type="button" class="btn-close"><span class="hidden">취소</span></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 210903 아래 테이블 전체 수정 -->
+        <div class="tbl-sticky type2 is-filter">
+          <div class="tbl-sticky-inner">
+            <header class="header-bg"></header>
+            <table class="tbl-bordered-bot">
+              <colgroup>
+                <col style="width:14%">
+                <col style="width:14%">
+                <col style="width:44%">
+                <col style="width:22%">
+                <col style="width:2%">
+                <col style="width:4%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><span style="width:14%">종류</span></th>
+                  <th><span style="width:14%">코드</span></th>
+                  <th><span style="width:44%">동작</span></th>
+                  <th><span style="width:22%">수정일시</span></th>
+                  <th><span style="width:2%">편집</span></th>
+                  <th><span style="width:4%">삭제</span></th>
+                </tr>
+              </thead>
+              <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
+              <tbody>
+                <tr>
+                  <td>바닥유도등</td>
+                  <td>code.gl.1</td>
+                  <td>소등</td>
+                  <td>2021-06-07 12:31:33</td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>바닥유도등</td>
+                  <td>code.gl.1</td>
+                  <td>소등</td>
+                  <td>2021-06-07 12:31:33</td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
+                  </td>
+                </tr>
+                <tr class="add-row"> <!-- 210829 행 추가시 add-row 클래스 추가 -->
+                  <td>
+                    <select class="selectbox bordered" style="min-width:180px;">
+                      <option>VMS</option>
+                      <option>음성안내 장치</option>
+                      <option>집중조명</option>
+                      <option>바닥유도등</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="input-txt type2" style="width:180px;">
+                  </td>
+                  <td>
+                    <input type="text" class="input-txt type2" style="width:750px;">
+                  </td>
+                  <td></td>
+                  <td>
+                    <button type="button" class="btn-save type2"><span class="hidden">저장</span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-close"><span class="hidden">취소</span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- //tbl-bordered-bot -->
+          </div>
+          <!-- //tbl-sticky-inner -->
         </div>
-        <!-- //tbl-singleline -->
+        <!-- //tbl-sticky -->
       </section>
       <!-- //monitering -->
     </main>

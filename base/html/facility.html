@@ -27,120 +27,126 @@
         </div>
         <!-- //tbl-list-header -->
 
-        <div class="tbl-single-bordered">
-          <table>
-            <colgroup>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col style="width:2%">
-              <col style="width:4%">
-            </colgroup>
-            <thead>
-              <tr>
-                <th>종류</th>
-                <th>시설물 ID</th>
-                <th>시설물 IP</th>
-                <th>PORT</th>
-                <th>방향</th>
-                <th>Device Id</th>
-                <th>카메라 연계</th>
-                <th>수정일시</th>
-                <th>편집</th>
-                <th>삭제</th>
-              </tr>
-            </thead>
-            <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
-            <tbody>
-              <tr>
-                <td>VMS</td>
-                <td>VM01</td>
-                <td>192.168.172.128</td>
-                <td>9000</td>
-                <td>남서</td>
-                <td>1</td>
-                <td>전체</td>
-                <td>2021-06-07 12:31:33</td>
-                <td>
-                  <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                </td>
-                <td>
-                  <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td>바닥유도등</td>
-                <td>GL01</td>
-                <td>192.168.172.128</td>
-                <td>6000</td>
-                <td>남서</td>
-                <td>1</td>
-                <td>1</td>
-                <td>2021-06-07 12:31:33</td>
-                <td>
-                  <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                </td>
-                <td>
-                  <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
-                </td>
-              </tr>
-              <tr class="add-row">
-                <td>
-                  <select class="selectbox bordered" style="min-width:180px;">
-                    <option>선택</option>
-                    <option>VMS</option>
-                    <option>음성안내 장치</option>
-                    <option>집중조명</option>
-                    <option>바닥유도등</option>
-                  </select>
-                </td>
-                <td>
-                  <input type="text" class="input-txt type2" style="width:193px;">
-                </td>
-                <td>
-                  <input type="text" class="input-txt type2" style="width:228px;">
-                </td>
-                <td>
-                  <input type="text" class="input-txt type2" style="width:140px;">
-                </td>
-                <td>
-                  <select class="selectbox bordered" style="min-width:150px;">
-                    <option>선택</option>
-                    <option>동</option>
-                    <option>서</option>
-                    <option>남</option>
-                    <option>북</option>
-                    <option>북서</option>
-                    <option>남동</option>
-                    <option>북동</option>
-                    <option>남서</option>
-                  </select>
-                </td>
-                <td>
-                  <select class="selectbox bordered" style="min-width:150px;">
-                    <option>선택</option>
-                  </select>
-                </td>
-                <td>
-                  <input type="text" class="input-txt type2" style="width:196px;">
-                </td>
-                <td></td>
-                <td>
-                  <button type="button" class="btn-save type2"><span class="hidden">저장</span></button>
-                </td>
-                <td>
-                  <button type="button" class="btn-close"><span class="hidden">취소</span></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 210903 아래 테이블 전체 수정 -->
+        <div class="tbl-sticky type2" data-componant="facility">
+          <div class="tbl-sticky-inner">
+            <header class="header-bg"></header>
+            <table class="tbl-bordered-bot">
+              <colgroup>
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:11.75%">
+                <col style="width:2%">
+                <col style="width:4%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><span style="width:11.75%">종류</span></th>
+                  <th><span style="width:11.75%">시설물 ID</span></th>
+                  <th><span style="width:11.75%">시설물 IP</span></th>
+                  <th><span style="width:11.75%">PORT</span></th>
+                  <th><span style="width:11.75%">방향</span></th>
+                  <th><span style="width:11.75%">Device Id</span></th>
+                  <th><span style="width:11.75%">카메라 연계</span></th>
+                  <th><span style="width:11.75%">수정일시</span></th>
+                  <th><span style="width:2%">편집</span></th>
+                  <th><span style="width:4%">삭제</span></th>
+                </tr>
+              </thead>
+              <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
+              <tbody>
+                <tr>
+                  <td>VMS</td>
+                  <td>VM01</td>
+                  <td>192.168.172.128</td>
+                  <td>9000</td>
+                  <td>남서</td>
+                  <td>1</td>
+                  <td>전체</td>
+                  <td>2021-06-07 12:31:33</td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>바닥유도등</td>
+                  <td>GL01</td>
+                  <td>192.168.172.128</td>
+                  <td>6000</td>
+                  <td>남서</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>2021-06-07 12:31:33</td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
+                  </td>
+                </tr>
+                <tr class="add-row">
+                  <td>
+                    <select class="selectbox bordered" style="width:100%;">
+                      <option>선택</option>
+                      <option>VMS</option>
+                      <option>음성안내 장치</option>
+                      <option>집중조명</option>
+                      <option>바닥유도등</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="input-txt type2" style="width:100%;">
+                  </td>
+                  <td>
+                    <input type="text" class="input-txt type2" style="width:100%;">
+                  </td>
+                  <td>
+                    <input type="text" class="input-txt type2" style="width:100%;">
+                  </td>
+                  <td>
+                    <select class="selectbox bordered" style="width:100%;">
+                      <option>선택</option>
+                      <option>동</option>
+                      <option>서</option>
+                      <option>남</option>
+                      <option>북</option>
+                      <option>북서</option>
+                      <option>남동</option>
+                      <option>북동</option>
+                      <option>남서</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="selectbox bordered" style="width:100%;">
+                      <option>선택</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="input-txt type2" style="width:100%;">
+                  </td>
+                  <td></td>
+                  <td>
+                    <button type="button" class="btn-save type2"><span class="hidden">저장</span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-close"><span class="hidden">취소</span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- //tbl-bordered-bot -->
+          </div>
+          <!-- //tbl-sticky-inner -->
         </div>
-        <!-- //tbl-singleline -->
+        <!-- //tbl-sticky -->
       </section>
       <!-- //monitering -->
     </main>

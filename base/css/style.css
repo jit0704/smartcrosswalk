@@ -780,6 +780,28 @@ footer .copylight.bg-gray2 {
   padding: 11px 0;
 }
 
+.unit.type3 {
+  border-radius: 0;
+}
+
+.unit.type3 .unit-header {
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.unit.type3 .unit-header .tit {
+  padding-left: 4px;
+  color: #181616;
+}
+
+.unit.type3 .unit-content .tbl-border-none {
+  padding: 0 12px;
+}
+
+.unit.type3 .unit-content .tbl-sticky {
+  margin: 0 12px;
+}
+
 .tab-group {
   overflow: hidden;
   border-radius: 5px;
@@ -843,6 +865,7 @@ footer .copylight.bg-gray2 {
 }
 
 .tbl-list-header h2 {
+  line-height: 20px;
   font-size: 20px;
   font-weight: 700;
 }
@@ -1367,6 +1390,35 @@ footer .copylight.bg-gray2 {
   background: none;
 }
 
+[data-componant="traffic"] tbody td {
+  line-height: 41px;
+}
+
+[data-componant="traffic"] tbody td span {
+  display: block;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+[data-componant="traffic"] tbody td:first-child span {
+  border-left: 1px solid #c4c4c4;
+  border-bottom-left-radius: 5px;
+}
+
+[data-componant="traffic"] tbody td:last-child span {
+  border-right: 1px solid #c4c4c4;
+  border-bottom-right-radius: 5px;
+}
+
+[data-componant="gumji-info"] .tbl-sticky-inner {
+  height: 529px;
+  border: 1px solid #c4c4c4;
+  border-bottom: 0;
+}
+
+[data-componant="gumji-info"] .tbl-sticky thead span {
+  top: 11px;
+}
+
 /* ###############################
     테이블
 ################################## */
@@ -1417,44 +1469,8 @@ footer .copylight.bg-gray2 {
   border-top: 1px solid #c4c4c4;
 }
 
-.tbl-single-bordered thead th {
-  padding: 11px 0;
-  font-weight: 400;
-  color: #fff;
-  background: #2d85c5;
-}
-
-.tbl-single-bordered thead th:first-child {
-  border-top-left-radius: 5px;
-}
-
-.tbl-single-bordered thead th:last-child {
-  border-top-right-radius: 5px;
-}
-
-.tbl-single-bordered tbody {
-  border: 1px solid #c4c4c4;
-  border-top: 0;
-}
-
-.tbl-single-bordered tbody td {
-  padding: 9px 0;
-  line-height: 37px;
-  text-align: center;
+.tbl-bordered-bot tbody tr:last-child td {
   border-bottom: 1px solid #c4c4c4;
-}
-
-.tbl-single-bordered tbody td [class*="btn-"] {
-  vertical-align: middle;
-}
-
-.tbl-single-bordered tbody tr:first-child td {
-  border-top: 1px solid transparent;
-}
-
-.tbl-single-bordered tbody .add-row td {
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
 }
 
 .tbl-sticky {
@@ -1492,8 +1508,25 @@ footer .copylight.bg-gray2 {
 }
 
 .tbl-sticky tbody td {
-  padding: 17px 0;
+  padding: 14px 0;
   text-align: center;
+}
+
+.tbl-sticky tbody tr:first-child td {
+  border-top: 1px solid transparent;
+}
+
+.tbl-sticky.type2 {
+  border-radius: 5px 5px 0 0;
+}
+
+.tbl-sticky.type2 .tbl-sticky-inner {
+  border: 1px solid #c4c4c4;
+  border-top: 0;
+}
+
+.tbl-sticky.type2 .add-row td {
+  padding: 8.5px 0;
 }
 
 /* ###############################
@@ -1595,6 +1628,25 @@ footer .copylight.bg-gray2 {
   font-size: 14px;
 }
 
+/* 시설물 관리 */
+.tbl-sticky.is-filter .tbl-sticky-inner {
+  height: calc(100vh - 286px);
+}
+
+[data-componant="facility"] .tbl-sticky-inner {
+  height: calc(100vh - 209px);
+}
+
+[data-componant="facility"] .add-row td:not(:nth-last-child(1)):not(:nth-last-child(2)):not(:nth-last-child(3)):not(:first-child) {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+[data-componant="facility"] .add-row td:first-child {
+  padding-left: 20px !important;
+  padding-right: 10px !important;
+}
+
 /* ###############################
     미디어쿼리
 ################################## */
@@ -1603,10 +1655,20 @@ footer .copylight.bg-gray2 {
   [data-componant="roi-infolist"] {
     height: 438px;
   }
+  /* 검지정보 > 우측 하단 리스트 */
+  [data-componant="gumji-info"] .tbl-sticky-inner {
+    height: 563px;
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .tbl-border-none.type-data thead th {
     padding: 2px 0;
+  }
+  [data-componant="traffic"] .tbl-border-none.type-data thead th {
+    padding: 13px 0;
+  }
+  [data-componant="gumji-info"] .tbl-sticky-inner {
+    height: 523px;
   }
 }
