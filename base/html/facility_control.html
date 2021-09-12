@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>모니터링</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" include-html="/base/html/common/header.html"></header>
+    <!-- //header -->
+
+    <main class="container bg-white">
+      <section class="list-type-wrap">
+        <div class="filter-group">
+          <div class="bind">
+            <span class="tit">구분</span>
+            <select class="selectbox bordered" style="width: 216px;"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
+              <option>신호</option>
+              <option>등기신호</option>
+              <option>비신호</option>
+            </select>
+          </div>
+          <!-- //bind -->
+        </div>
+        <!-- //filter-group -->
+
+        <div class="tbl-list-header type2">
+          <h2>시설물 제어 관리</h2>
+          <div class="btn-inline-group">
+            <a href="#" class="btn-question"><span class="hidden">help</span></a>
+          </div>
+        </div>
+        <!-- //tbl-list-header -->
+
+        <div class="tbl-sticky type2 is-filter" data-componant="facility-control">
+          <div class="tbl-sticky-inner">
+            <header class="header-bg"></header>
+            <table class="tbl-bordered-bot">
+              <colgroup>
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th><span style="width:10%">시나리오</span></th>
+                  <th><span style="width:10%">VMS</span></th>
+                  <th><span style="width:10%">시나리오</span></th>
+                  <th><span style="width:10%">음성안내 장치</span></th>
+                  <th><span style="width:10%">시나리오</span></th>
+                  <th><span style="width:10%">바닥유도등</span></th>
+                  <th><span style="width:10%">시나리오</span></th>
+                  <th><span style="width:10%">집중조명</span></th>
+                  <th><span style="width:10%">미리보기</span></th>
+                  <th><span style="width:10%">편집</span></th>
+                </tr>
+              </thead>
+              <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
+              <tbody>
+                <tr>
+                  <td>000000</td>
+                  <td>code.vm.1</td>
+                  <td>0000</td>
+                  <td>code.vg.1</td>
+                  <td>000</td>
+                  <td>code.gl.1</td>
+                  <td>000</td>
+                  <td>code.ir.1</td>
+                  <td>
+                    <a href="#" class="btn-show">SHOW</a>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000000</td>
+                  <td>code.vm.1</td>
+                  <td>0000</td>
+                  <td>code.vg.1</td>
+                  <td>000</td>
+                  <td>code.gl.1</td>
+                  <td>000</td>
+                  <td>code.ir.1</td>
+                  <td>
+                    <a href="#" class="btn-show">SHOW</a>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000000</td>
+                  <td>code.vm.1</td>
+                  <td>0000</td>
+                  <td>code.vg.1</td>
+                  <td>000</td>
+                  <td>code.gl.1</td>
+                  <td>000</td>
+                  <td>code.ir.1</td>
+                  <td>
+                    <a href="#" class="btn-show">SHOW</a>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- //tbl-bordered-bot -->
+          </div>
+          <!-- //tbl-sticky-inner -->
+        </div>
+        <!-- //tbl-sticky -->
+      </section>
+      <!-- //monitering -->
+    </main>
+    <!-- //container -->
+
+    <footer include-html="/base/html/common/footer2.html"></footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>

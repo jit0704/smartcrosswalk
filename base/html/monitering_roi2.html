@@ -53,76 +53,116 @@
           <div class="control-content">
             <div class="tab-group">
               <div class="tab-nav">
-                <a href="#vehicle" class="active">차량</a>
-                <a href="#walker">보행자</a>
+                <a href="#vehicle">차량</a>
+                <a href="#walker" class="active">보행자</a>
               </div>
               <!-- //tab-nav -->
               <div class="tab-container">
-                <div id="vehicle" class="tab-content">
+                <div id="walker" class="tab-content">
                   <div class="roi-vehicle" data-componant="roi-vehicle">
                     <div class="radio-inline-group bordered">
                       <label class="radio-bordered">
-                        <input type="radio" name="scope" class="hidden">
-                        <span class="txt">진입영역</span>
+                        <input type="radio" name="scope1" class="hidden">
+                        <span class="txt">횡단보도</span>
                       </label>
                       <label class="radio-bordered">
-                        <input type="radio" name="scope" class="hidden">
-                        <span class="txt">정지영역</span>
+                        <input type="radio" name="scope1" class="hidden">
+                        <span class="txt">도로</span>
                       </label>
                       <label class="radio-bordered">
-                        <input type="radio" name="scope" class="hidden">
-                        <span class="txt">진출영역</span>
+                        <input type="radio" name="scope1" class="hidden">
+                        <span class="txt">Handover</span>
                       </label>
                       <label class="radio-bordered">
-                        <input type="radio" name="scope" class="hidden">
-                        <span class="txt">반대영역</span>
+                        <input type="radio" name="scope1" class="hidden">
+                        <span class="txt">방위</span>
                       </label>
                     </div>
                     <!-- //radio-inline-group -->
-                    <div class="swiper-container road-swiper">
-                      <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road straight"><em class="hidden">직진</em></span>
-                          </label>
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road left"><em class="hidden">좌회전</em></span>
-                          </label>
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road right"><em class="hidden">우회전</em></span>
-                          </label>
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road u-turn"><em class="hidden">유턴</em></span>
-                          </label>
-                        </li>
-                        <li class="swiper-slide">
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road straight-left"><em class="hidden">직좌</em></span>
-                          </label>
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road straight-right"><em class="hidden">직우</em></span>
-                          </label>
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road left-uturn"><em class="hidden">좌회전+유턴</em></span>
-                          </label>
-                          <label class="radio-road">
-                            <input type="radio" name="road" class="hidden">
-                            <span class="road bus"><em class="hidden">버스</em></span>
-                          </label>
-                        </li>
-                      </ul>
-                      <!-- //swiper-wrapper -->
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
+
+                    <div class="radio-inline-group bordered">
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope2" class="hidden">
+                        <span class="txt">A 방위</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope2" class="hidden">
+                        <span class="txt">B 방위</span>
+                      </label>
                     </div>
-                    <!-- //swiper-container -->
+                    <!-- //radio-inline-group -->
+
+                    <!-- <div class="radio-inline-group bordered">
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope2-2" class="hidden">
+                        <span class="txt">인접채널1</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope2-2" class="hidden">
+                        <span class="txt">인접채널2</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope2-2" class="hidden">
+                        <span class="txt">인접채널3</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope2-2" class="hidden">
+                        <span class="txt">인접채널4</span>
+                      </label>
+                    </div> -->
+                    <!-- //radio-inline-group -->
+
+                    <div class="radio-inline-group bordered">
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">동</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">서</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">남</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">북</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">북동</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">남서</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">북서</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope3" class="hidden">
+                        <span class="txt">남동</span>
+                      </label>
+                    </div>
+                    <!-- //radio-inline-group -->
+
+                    <div class="radio-inline-group bordered">
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope4" class="hidden">
+                        <span class="txt">검지영역</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope4" class="hidden">
+                        <span class="txt">대기영역</span>
+                      </label>
+                      <label class="radio-bordered">
+                        <input type="radio" name="scope4" class="hidden">
+                        <span class="txt">위험영역</span>
+                      </label>
+                    </div>
+                    <!-- //radio-inline-group -->
                   
                     <div class="radio-inline-group border-radius">
                       <label class="radio-bgcolor">
@@ -164,44 +204,8 @@
                     </div>
                     <!-- //radio-inline-group -->
 
-                    <div class="radio-inline-group bordered road-choice">
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">1차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">2차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">3차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">4차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">5차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">6차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">7차로</span>
-                      </label>
-                      <label class="radio-bordered">
-                        <input type="radio" name="road2" class="hidden">
-                        <span class="txt">8차로</span>
-                      </label>
-                    </div>
-                    <!-- //radio-inline-group -->
-
                     <div class="result-box">
-                      <p class="txt">진입영역, 직진, 빨간색, 1차로</p>
+                      <p class="txt">횡단보도, 빨간색</p>
                       <!-- <p class="msg">ROI보기 활성화 및 객체인식모드를 해제해주세요</p> -->
                     </div>
                     <!-- //result-box -->
@@ -214,7 +218,7 @@
                   </div>
                   <!-- //roi-vehicle -->
 
-                  <div class="unit type2" data-componant="roi-infolist">
+                  <div class="unit type2" data-componant="roi-infolist-walker">
                     <header class="unit-header">
                       <button type="button" class="btn-save"><span class="hidden">저장</span></button>
                     </header>
@@ -234,7 +238,7 @@
                             <thead>
                               <tr>
                                 <th><span style="width:16.66%;">type</span></th>
-                                <th><span style="width:16.66%;">차로번호</span></th>
+                                <th><span style="width:16.66%;">분류</span></th>
                                 <th><span style="width:16.66%;">방향</span></th>
                                 <th><span style="width:16.66%;">점개수</span></th>
                                 <th><span style="width:16.66%;">색상</span></th>
@@ -243,8 +247,8 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td>진입</td>
-                                <td>1</td>
+                                <td>도로</td>
+                                <td></td>
                                 <td>직진</td>
                                 <td>10</td>
                                 <td><span class="bg-display bg-red"><em class="hidden">빨간색</em></span></td>
@@ -253,8 +257,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>1</td>
+                                <td>횡단보도</td>
+                                <td></td>
                                 <td>직진</td>
                                 <td>10</td>
                                 <td><span class="bg-display bg-blue"><em class="hidden">파란색</em></span></td>
@@ -263,8 +267,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>2</td>
+                                <td>A방위</td>
+                                <td>검지</td>
                                 <td>우회전</td>
                                 <td>5</td>
                                 <td><span class="bg-display bg-yellow"><em class="hidden">노란색</em></span></td>
@@ -273,8 +277,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>1</td>
+                                <td>A영역</td>
+                                <td>대기</td>
                                 <td>직진</td>
                                 <td>10</td>
                                 <td><span class="bg-display bg-orange"><em class="hidden">주황색</em></span></td>
@@ -283,8 +287,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>1</td>
+                                <td>A영역</td>
+                                <td>위험</td>
                                 <td>직진</td>
                                 <td>10</td>
                                 <td><span class="bg-display bg-yellowgreen"><em class="hidden">연두색</em></span></td>
@@ -293,8 +297,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>2</td>
+                                <td>B영역</td>
+                                <td>검지</td>
                                 <td>우회전</td>
                                 <td>5</td>
                                 <td><span class="bg-display bg-gray"><em class="hidden">회색</em></span></td>
@@ -303,8 +307,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>1</td>
+                                <td>B영역</td>
+                                <td></td>
                                 <td>직진</td>
                                 <td>10</td>
                                 <td><span class="bg-display bg-violet"><em class="hidden">보라색</em></span></td>
@@ -313,8 +317,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>1</td>
+                                <td>B영역</td>
+                                <td></td>
                                 <td>직진</td>
                                 <td>10</td>
                                 <td><span class="bg-display bg-darkgreen"><em class="hidden">녹색</em></span></td>
@@ -323,8 +327,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <td>진입</td>
-                                <td>2</td>
+                                <td>횡단보도</td>
+                                <td>대기</td>
                                 <td>우회전</td>
                                 <td>5</td>
                                 <td><span class="bg-display bg-brown"><em class="hidden">갈색</em></span></td>

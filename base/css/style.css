@@ -215,6 +215,10 @@ a, span, em, button, label, i, b, strong {
   background-color: #0b4aed !important;
 }
 
+.bg-blue2 {
+  background-color: #2d85c5 !important;
+}
+
 .bg-yellow {
   background-color: #fbff39 !important;
 }
@@ -479,7 +483,7 @@ footer .copylight.bg-gray2 {
 .modal {
   width: 450px;
   padding: 62px 22px 0;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .modal a.close-modal {
@@ -498,14 +502,21 @@ footer .copylight.bg-gray2 {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 33px 0;
+  text-align: center;
+}
+
+.modal-btn-group.align-spacebetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal-btn-group .btn-default {
-  width: 146px;
+  min-width: 64px;
 }
 
 .modal-btn-group .btn-default:not(:first-child) {
-  margin-left: 12px;
+  margin-left: 10px;
 }
 
 .modal.alert {
@@ -516,9 +527,58 @@ footer .copylight.bg-gray2 {
   text-align: center;
 }
 
+.modal.primary {
+  width: 555px;
+  padding: 0 0 26px;
+}
+
+.modal.primary a.close-modal {
+  top: 3px;
+  background-image: url(/base/images/btn_close_white.png);
+}
+
+.modal.primary .modal-header {
+  padding-left: 22px;
+  line-height: 42px;
+  background: #0c4670;
+  color: #fff;
+  font-weight: 800;
+}
+
+.modal.primary .modal-content .tbl-border-none {
+  padding: 0;
+}
+
+.modal.primary.management .modal-content {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.modal.primary.management .modal-content .input-txt {
+  border-radius: 0;
+}
+
+.modal.primary.management .modal-content .flexbox .btn-default {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin-left: 10px;
+  padding: 11px 14px;
+}
+
+.modal.primary.management .modal-btn-group {
+  margin: 0 45px 0;
+}
+
 /* ###############################
     공통 기타
 ################################## */
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .logo {
   width: 175px;
   height: 46px;
@@ -604,6 +664,10 @@ footer .copylight.bg-gray2 {
 
 .gnb li.setup > a::before {
   background-image: url(/base/images/ic_setup.png);
+}
+
+.gnb li.add > a::before {
+  background-image: url(/base/images/ic_doc.png);
 }
 
 .gnb li:hover > a {
@@ -888,6 +952,14 @@ footer .copylight.bg-gray2 {
   margin-right: 30px;
 }
 
+.tbl-list-header.type2 {
+  padding-right: 0;
+}
+
+.tbl-list-header.type2 .btn-inline-group .btn-question {
+  margin-right: 0;
+}
+
 /* ###############################
     swiper style 수정
 ################################## */
@@ -1032,6 +1104,14 @@ footer .copylight.bg-gray2 {
   opacity: 0.3;
 }
 
+.btn-show {
+  width: 98px;
+  line-height: 36px;
+  border-radius: 5px;
+  border: 1px solid #c4c4c4;
+  color: #181616;
+}
+
 .btn-close {
   width: 35px;
   height: 35px;
@@ -1040,8 +1120,17 @@ footer .copylight.bg-gray2 {
 }
 
 .btn-default {
-  padding: 13px 0;
-  line-height: 16px;
+  padding: 13px 15px;
+  line-height: 15px;
+  color: #181616;
+}
+
+.btn-default.bordered {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn-default.bg-blue2 {
+  color: #fff;
 }
 
 .btn-block {
@@ -1154,6 +1243,10 @@ footer .copylight.bg-gray2 {
   border-radius: 5px;
 }
 
+.radio-inline-group.bordered + .radio-inline-group {
+  margin-top: 6px;
+}
+
 .radio-inline-group.border-radius {
   overflow: hidden;
   border-radius: 5px;
@@ -1240,6 +1333,16 @@ footer .copylight.bg-gray2 {
 .radio-bgcolor .bg {
   display: block;
   height: 29px;
+}
+
+.radio-bgcolor input:checked + .bg {
+  -webkit-box-shadow: 0 0 0 2px #ff1f00 inset;
+          box-shadow: 0 0 0 2px #ff1f00 inset;
+}
+
+.radio-bgcolor input:checked + .bg.bg-red {
+  -webkit-box-shadow: 0 0 0 2px #181616 inset;
+          box-shadow: 0 0 0 2px #181616 inset;
 }
 
 /* 체크박스 */
@@ -1390,6 +1493,14 @@ footer .copylight.bg-gray2 {
   background: none;
 }
 
+[data-componant="roi-infolist-walker"] {
+  height: 390px;
+}
+
+[data-componant="roi-infolist-walker"] .unit-content {
+  background: none;
+}
+
 [data-componant="traffic"] tbody td {
   line-height: 41px;
 }
@@ -1433,6 +1544,15 @@ footer .copylight.bg-gray2 {
 
 .tbl-border-none td {
   height: 39px;
+}
+
+.tbl-border-none.md th, .tbl-border-none.md td {
+  height: 40px;
+}
+
+.tbl-border-none.md .input-txt {
+  height: 40px;
+  line-height: 40px;
 }
 
 .tbl-border-none.type-data thead th {
@@ -1577,6 +1697,25 @@ footer .copylight.bg-gray2 {
   cursor: pointer;
 }
 
+.monitering > .ly-left .video-item.off {
+  border-color: #7e7e7e;
+}
+
+.monitering > .ly-left .video-item.off:hover {
+  cursor: default;
+}
+
+.monitering > .ly-left .video-item.off::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/base/images/logo_white.png) no-repeat 50% 50% #7e7e7e;
+  background-size: 199px 53px;
+}
+
 .monitering > .ly-center {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1647,6 +1786,55 @@ footer .copylight.bg-gray2 {
   padding-right: 10px !important;
 }
 
+[data-componant="facility-control"] tbody td {
+  padding: 8.5px 0;
+}
+
+[data-componant="facility-control"] tbody td:not(:first-child) {
+  border-left: 1px solid #c4c4c4;
+}
+
+[data-componant="facility-control"] tbody td:nth-child(even) {
+  border-left: 0;
+}
+
+/* 설정관리 팝업 */
+.mana-modify .modal-content {
+  padding-top: 6px;
+}
+
+.mana-modify .modal-content table {
+  height: 385px;
+}
+
+.mana-modify .modal-btn-group {
+  margin-top: 10px !important;
+}
+
+.manaregist .modal-content {
+  padding-top: 20px;
+}
+
+.manaregist .modal-content table {
+  height: 220px;
+}
+
+.manaregist .modal-btn-group {
+  margin-top: 20px !important;
+}
+
+.manapwd .modal-content {
+  padding-top: 20px;
+}
+
+.manapwd .modal-content table {
+  height: 110px;
+}
+
+.manapwd .modal-btn-group {
+  margin-top: 20px !important;
+}
+
 /* ###############################
     미디어쿼리
 ################################## */
@@ -1654,6 +1842,9 @@ footer .copylight.bg-gray2 {
   /* roi 설정 > 우측 하단 리스트 */
   [data-componant="roi-infolist"] {
     height: 438px;
+  }
+  [data-componant="roi-infolist-walker"] {
+    height: 422px;
   }
   /* 검지정보 > 우측 하단 리스트 */
   [data-componant="gumji-info"] .tbl-sticky-inner {
