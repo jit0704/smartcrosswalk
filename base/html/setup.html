@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>시설물 동작 관리</title>
+  <title>환경설정</title>
   <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
   <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
@@ -19,49 +19,34 @@
 
     <main class="container bg-white">
       <section class="list-type-wrap">
-        <div class="filter-group">
-          <div class="bind">
-            <span class="tit">시설물 종류</span>
-            <select class="selectbox bordered"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
-              <option>전체</option>
-              <option>VMS</option>
-              <option>음성안내장치</option>
-              <option>집중조명</option>
-              <option>바닥유도등</option>
-            </select>
-          </div>
-          <!-- //bind -->
-        </div>
-        <!-- //filter-group -->
-
         <div class="tbl-list-header">
-          <h2>시설물 동작 관리</h2>
+          <h2>환경설정</h2>
           <div class="btn-inline-group">
-            <a href="#" class="btn-question"><span class="hidden">help</span></a>
             <button type="button" class="btn-plus"><span class="hidden">테이블 입력영역 추가</span></button> <!-- 버튼 비활성화 : disabled 속성 추가 -->
           </div>
         </div>
         <!-- //tbl-list-header -->
 
-        <!-- 210903 아래 테이블 전체 수정 -->
-        <div class="tbl-sticky type2 is-filter">
+        <div class="tbl-sticky type2" data-componant="setup">
           <div class="tbl-sticky-inner">
             <header class="header-bg"></header>
             <table class="tbl-bordered-bot">
               <colgroup>
-                <col style="width:14%">
-                <col style="width:14%">
-                <col style="width:44%">
-                <col style="width:22%">
+                <col style="width:10.8%">
+                <col style="width:20.8%">
+                <col style="width:20.8%">
+                <col style="width:20.8%">
+                <col style="width:20.8%">
                 <col style="width:2%">
                 <col style="width:4%">
               </colgroup>
               <thead>
                 <tr>
-                  <th><span style="width:14%">종류</span></th>
-                  <th><span style="width:14%">코드</span></th>
-                  <th><span style="width:44%">동작</span></th>
-                  <th><span style="width:22%">수정일시</span></th>
+                  <th><span style="width:10.8%">구분</span></th>
+                  <th><span style="width:20.8%">변수명</span></th>
+                  <th><span style="width:20.8%">변수값</span></th>
+                  <th><span style="width:20.8%">설명</span></th>
+                  <th><span style="width:20.8%">수정일시</span></th>
                   <th><span style="width:2%">편집</span></th>
                   <th><span style="width:4%">삭제</span></th>
                 </tr>
@@ -69,9 +54,10 @@
               <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
               <tbody>
                 <tr>
-                  <td>바닥유도등</td>
-                  <td>code.gl.1</td>
-                  <td>소등</td>
+                  <td>1</td>
+                  <td>manager</td>
+                  <td>choi</td>
+                  <td>관리자 이름</td>
                   <td>2021-06-07 12:31:33</td>
                   <td>
                     <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
@@ -81,9 +67,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>바닥유도등</td>
-                  <td>code.gl.1</td>
-                  <td>소등</td>
+                  <td>2</td>
+                  <td>manager</td>
+                  <td>00:11:00</td>
+                  <td>11시에 시작</td>
                   <td>2021-06-07 12:31:33</td>
                   <td>
                     <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
@@ -92,22 +79,12 @@
                     <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
                   </td>
                 </tr>
-                <tr class="add-row"> <!-- 210829 행 추가시 add-row 클래스 추가 -->
-                  <td>
-                    <select class="selectbox bordered" style="min-width:180px;">
-                      <option>VMS</option>
-                      <option>음성안내장치</option>
-                      <option>집중조명</option>
-                      <option>바닥유도등</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input type="text" class="input-txt type2" style="width:180px;">
-                  </td>
-                  <td>
-                    <input type="text" class="input-txt type2" style="width:750px;">
-                  </td>
-                  <td></td>
+                <tr class="add-row">
+                  <td>3</td>
+                  <td><input type="text" class="input-txt type2" style="width:100%;"></td>
+                  <td><input type="text" class="input-txt type2" style="width:100%;"></td>
+                  <td><input type="text" class="input-txt type2" style="width:100%;"></td>
+                  <td>2021-06-07 12:31:33</td>
                   <td>
                     <button type="button" class="btn-save type2"><span class="hidden">저장</span></button>
                   </td>
