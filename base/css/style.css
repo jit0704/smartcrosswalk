@@ -1741,12 +1741,19 @@ footer .copylight.bg-gray2 {
   background: none;
 }
 
+[data-componant="traffic"] .unit-content {
+  padding-top: 12px;
+}
+
 [data-componant="traffic"] tbody td {
   line-height: 41px;
 }
 
 [data-componant="traffic"] tbody td span {
   display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: #181616;
   border-bottom: 1px solid #c4c4c4;
 }
 
@@ -1760,8 +1767,17 @@ footer .copylight.bg-gray2 {
   border-bottom-right-radius: 5px;
 }
 
+[data-componant="gumji-info"] .unit-header {
+  padding-top: 17px !important;
+  padding-bottom: 10px !important;
+}
+
+[data-componant="gumji-info"] .unit-header .tit {
+  line-height: 16px;
+}
+
 [data-componant="gumji-info"] .tbl-sticky-inner {
-  height: 529px;
+  height: 557px;
   border: 1px solid #c4c4c4;
   border-bottom: 0;
 }
@@ -2228,16 +2244,26 @@ footer .copylight.bg-gray2 {
     미디어쿼리
 ################################## */
 @media screen and (min-height: 969px) {
-  /* roi 설정 > 우측 하단 리스트 */
-  [data-componant="roi-infolist"] {
-    height: 422px;
-  }
-  [data-componant="roi-infolist-walker"] {
-    height: 422px;
+  /* information > 우측 하단 리스트 */
+  [data-componant="camera-state"] {
+    max-height: 238px;
   }
   /* 검지정보 > 우측 하단 리스트 */
   [data-componant="gumji-info"] .tbl-sticky-inner {
-    height: 563px;
+    height: 560px;
+  }
+  /* roi 설정 > 우측 하단 리스트 */
+  [data-componant="roi-infolist"] {
+    height: 392px;
+  }
+  [data-componant="roi-infolist-walker"] {
+    height: 392px;
+  }
+  /* 파일 업데이트 > 우측 하단 리스트 */
+  [data-componant="file-update"] {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 383px;
+            flex: 0 1 383px;
   }
 }
 

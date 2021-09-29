@@ -58,9 +58,9 @@
               <div class="tab-container">
                 <div id="vehicle" class="tab-content">
                   <div class="unit type3" data-componant="traffic">
-                    <header class="unit-header">
+                    <!-- <header class="unit-header"> 210929 삭제
                       <span class="tit">보행량</span>
-                    </header>
+                    </header> -->
                     <div class="unit-content">
                       <div class="tbl-border-none type-data">
                         <table>
@@ -70,8 +70,8 @@
                           </colgroup>
                           <thead>
                             <tr>
-                              <th>방향 : 서 → 동</th>
-                              <th>방향 : 서 ← 동</th>
+                              <th>서 → 동</th>
+                              <th>서 ← 동</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -97,36 +97,32 @@
                         <div class="tbl-sticky-inner">
                           <header class="header-bg"></header>
                           <table class="tbl-bordered-bot">
+                            <!-- 210929 col, span width 값 수정 -->
                             <colgroup>
-                              <col style="width:14%;">
-                              <col style="width:28.66%;">
-                              <col style="width:28.66%;">
-                              <col style="width:28.66%;">
+                              <col style="width:20%;">
+                              <col style="width:40%;">
+                              <col style="width:40%;">
                             </colgroup>
                             <thead>
                               <tr>
-                                <th><span style="width:14%;">ID</span></th>
-                                <th><span style="width:28.66%;">위치</span></th>
-                                <th><span style="width:28.66%;">상태</span></th>
-                                <th><span style="width:28.66%;">비고</span></th>
+                                <th><span style="width:20%;">ID</span></th>
+                                <th><span style="width:40%;">위치</span></th>
+                                <th><span style="width:40%;">비고</span></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>0</td>
                                 <td>도로</td>
-                                <td></td>
                                 <td>무단횡단</td>
                               </tr>
                               <tr>
                                 <td>1</td>
-                                <td>횡단보도</td>
                                 <td>무단횡단</td>
                                 <td></td>
                               </tr>
                               <tr>
                                 <td>2</td>
-                                <td>그 외</td>
                                 <td>위험</td>
                                 <td></td>
                               </tr>

@@ -58,7 +58,7 @@
 .ia-graph .tit {position:absolute; left:0; top:0; z-index:2; width:160px; width:150px; height:100%; padding:0 10px; border-radius:10px 0 0 10px; background-color:rgba(0,0,0,0.4); color:#fff;}
 .ia-graph .bar {display:block; position:relative; z-index:1; height:21px; overflow:hidden; background-color:rgba(0,0,0,0.2); border-radius:10px;}
 .ia-graph .bar:before {content:attr(data-process); position:absolute; right:0; top:0; z-index:2; display:inline-block; width:120px; text-align:right; color:#fff;}
-.ia-graph .bar .active {position:absolute; left:0; top:0; z-index:1; display:block; width:0; height:100%; transition:width 0.6s ease-out; -webkit-transition:width 0.6s ease-out 0s; -moz-transition:width 0.6s ease-out 0s; -o-transition:width 0.6s ease-out 0s; opacity:1;}
+.ia-graph .bar .active {position:absolute; left:0; top:0; z-index:1; display:block; width:0; height:100%; transition:width 1.5s ease; opacity:1; background: #888;}
 .ia-graph .pages {position:absolute; left:150px; top:0; z-index:3; padding-left:10px; width:65px; text-align:left; color:#fff;}
 .ia-graph .bar:before, .ia-graph .pages {padding:0 15px;}
 
