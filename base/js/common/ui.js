@@ -7,6 +7,19 @@ $(function(){
 });
 
 function cmmnui () {
+  // 210930 추가 : input autocomplete 비활성화
+  var $txtInput0 = $('[type="text"], [type="number"]');
+  $txtInput0.attr('autocomplete', 'off');
+
+  // 210930 추가 : 로그인 폼 영역 포커스
+  var $txtInput = $('.loginbox-input input')
+  $txtInput.on('focus', function(){
+    $(this).parent().addClass('active');
+  });
+  $txtInput.on('blur', function(){
+    $(this).parent().removeClass('active');
+  });
+
   // 모달 팝업
   $('.btn-modal-open').on('click', function () {
     $(this).modal({
