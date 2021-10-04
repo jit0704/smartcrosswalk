@@ -15,64 +15,67 @@
   <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
 </head>
 <body>
-  <div id="ex" class="modal primary management mana-modify">
-    <div class="modal-header">
-      <span class="tit">관리자 수정</span>
-    </div>
-    <div class="modal-content">
-      <div class="tbl-border-none md">
-        <table>
-          <colgroup>
-            <col style="width:25%;">
-            <col style="width:75%;">
-          </colgroup>
-          <tbody>
-            <tr>
-              <th>관리자 ID</th>
-              <td>manager</td>
-            </tr>
-            <tr>
-              <th>관리자 명</th>
-              <td><input type="text" placeholder="필수" class="input-txt"></td>
-            </tr>
-            <tr>
-              <th>이메일 주소</th>
-              <td>
-                <div class="flexbox">
-                  <input type="text" placeholder="필수" class="input-txt">
-                  <button type="button" class="btn-default bordered">중복확인</button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>전화번호</th>
-              <td><input type="text" placeholder="선택" class="input-txt"></td>
-            </tr>
-            <tr>
-              <th>최종접속일시</th>
-              <td>2021-09-05 12:05:22</td>
-            </tr>
-            <tr>
-              <th>수정자 ID</th>
-              <td>manager</td>
-            </tr>
-            <tr>
-              <th>수정 일시</th>
-              <td>2021-09-05 15:26:48</td>
-            </tr>
-          </tbody>
-        </table>
+  <div id="ex" class="modal">
+    <div class="modal-primary management mana-modify">
+      <div class="modal-header">
+        <span class="tit">관리자 수정</span>
       </div>
+      <div class="modal-content">
+        <div class="tbl-border-none md">
+          <table>
+            <colgroup>
+              <col style="width:25%;">
+              <col style="width:75%;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>관리자 ID</th>
+                <td>manager</td>
+              </tr>
+              <tr>
+                <th>관리자 명</th>
+                <td><input type="text" placeholder="필수" class="input-txt"></td>
+              </tr>
+              <tr>
+                <th>이메일 주소</th>
+                <td>
+                  <div class="flexbox">
+                    <input type="text" placeholder="필수" class="input-txt">
+                    <button type="button" class="btn-default bordered">중복확인</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>전화번호</th>
+                <td><input type="text" placeholder="선택" class="input-txt"></td>
+              </tr>
+              <tr>
+                <th>최종접속일시</th>
+                <td>2021-09-05 12:05:22</td>
+              </tr>
+              <tr>
+                <th>수정자 ID</th>
+                <td>manager</td>
+              </tr>
+              <tr>
+                <th>수정 일시</th>
+                <td>2021-09-05 15:26:48</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- //modal-content -->
+      <div class="modal-btn-group align-spacebetween">
+        <a href="# " rel="modal:close" class="btn-default bordered">삭제</a>
+        <span class="flexbox">
+          <a href="# " rel="modal:close" class="btn-default bg-blue2">비밀번호변경</a>
+          <a href="# " rel="modal:close" class="btn-default bg-blue2">저장</a>
+        </span>
+      </div>
+      <!-- //modal-btn-group -->
     </div>
-    <!-- //modal-content -->
-    <div class="modal-btn-group align-spacebetween">
-      <a href="# " rel="modal:close" class="btn-default bordered">삭제</a>
-      <span class="flexbox">
-        <a href="# " rel="modal:close" class="btn-default bg-blue2">비밀번호변경</a>
-        <a href="# " rel="modal:close" class="btn-default bg-blue2">저장</a>
-      </span>
-    </div>
-    <!-- //modal-btn-group -->
+    <!-- //management -->
   </div>
   <!-- //modal -->
 

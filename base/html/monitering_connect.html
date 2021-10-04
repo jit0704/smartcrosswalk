@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>모니터링</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" include-html="/base/html/common/header.html"></header>
+    <!-- //header -->
+
+    <main class="container">
+      <section class="monitering">
+        <article class="ly-left" include-html="/base/html/common/monitering_left.html"></article>
+        <!-- //ly-left -->
+
+        <article class="ly-center" include-html="/base/html/common/monitering_center.html"></article>
+        <!-- //ly-center -->
+
+        <article class="ly-right">
+          <div class="control-header">
+            <span class="select-choice">
+              <i class="ic-link"></i>
+              <select class="selectbox">
+                <option>Information</option>
+                <option>검지 정보</option>
+                <option selected>연계 동작 상태</option>
+                <option>ROI 설정</option>
+                <option>객체 인식 파라메터 설정</option>
+                <option>파일 업데이트</option>
+              </select>
+            </span>
+            <span class="switch-group mr10">
+              <em class="txt">ROI 보기</em>
+              <label class="switch">
+                <input type="checkbox" class="hidden">
+                <span class="slider"></span>
+              </label>
+            </span>
+          </div>
+          <!-- //control-header -->
+
+          <div class="control-content">
+            <div class="unit" data-componant="monitering-connect">
+              <header class="unit-header">
+                <span class="tit">시설물 동작</span>
+                <span class="switch-group">
+                  <em class="txt">전체 연결</em>
+                  <label class="switch">
+                    <input type="checkbox" class="hidden">
+                    <span class="slider"></span>
+                  </label>
+                </span>
+              </header>
+              <div class="unit-content">
+                <div class="facility-state-container">
+                  <div class="facility-state-header">
+                    <span class="tit">VMS</span>
+                    <span class="switch-group">
+                      <em class="txt c-green">Action</em>
+                      <label class="switch">
+                        <input type="checkbox" class="hidden">
+                        <span class="slider"></span>
+                      </label>
+                    </span>
+                  </div>
+                  <!-- //facility-state-header -->
+                  <div class="facility-state-content">
+                    <div class="facility-vms">
+                      <p><em>안전운전</em> 해주세요</p>
+                    </div>
+                  </div>
+                  <!-- //facility-state-content -->
+                </div>
+                <!-- //facility-state-container -->
+
+                <div class="facility-state-container">
+                  <div class="facility-state-header">
+                    <span class="tit">음성안내장치</span>
+                    <span class="switch-group">
+                      <em class="txt c-green">Ready</em>
+                      <label class="switch">
+                        <input type="checkbox" class="hidden">
+                        <span class="slider"></span>
+                      </label>
+                    </span>
+                  </div>
+                  <!-- //facility-state-header -->
+                  <div class="facility-state-content">
+                    <div class="facility-audio-guidance">
+                      <p>다음 신호에 건너세요</p>
+                    </div>
+                  </div>
+                  <!-- //facility-state-content -->
+                </div>
+                <!-- //facility-state-container -->
+
+                <div class="facility-state-container">
+                  <div class="facility-state-header">
+                    <span class="tit">집중조명</span>
+                    <span class="switch-group">
+                      <em class="txt c-green">Ready</em>
+                      <label class="switch">
+                        <input type="checkbox" class="hidden">
+                        <span class="slider"></span>
+                      </label>
+                    </span>
+                  </div>
+                  <!-- //facility-state-header -->
+                  <div class="facility-state-content">
+                    <!-- style rgba속성 alpha값으로 조명밝기 조절(0 ~ 1)  -->
+                    <div class="facility-lighting" style="background: rgba(255, 194, 39, 0.7);">
+                      <p>100%</p>
+                    </div>
+                  </div>
+                  <!-- //facility-state-content -->
+                </div>
+                <!-- //facility-state-container -->
+
+                <div class="facility-state-container">
+                  <div class="facility-state-header">
+                    <span class="tit">바닥유도등</span>
+                    <span class="switch-group">
+                      <em class="txt c-red">Error</em>
+                      <label class="switch">
+                        <input type="checkbox" class="hidden">
+                        <span class="slider"></span>
+                      </label>
+                    </span>
+                  </div>
+                  <!-- //facility-state-header -->
+                  <div class="facility-state-content">
+                    <div class="facility-botinduce">
+                      <p>소등</p>
+                    </div>
+                  </div>
+                  <!-- //facility-state-content -->
+                </div>
+                <!-- //facility-state-container -->
+              </div>
+              <!-- //unit-content -->
+            </div>
+            <!-- //unit -->
+          </div>
+          <!-- //control-content -->
+        </article>
+        <!-- //ly-right -->
+
+      </section>
+      <!-- //monitering -->
+    </main>
+    <!-- //container -->
+
+    <footer include-html="/base/html/common/footer.html"></footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>
