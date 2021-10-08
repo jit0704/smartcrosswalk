@@ -21,12 +21,23 @@
       <section class="list-type-wrap">
         <div class="filter-group">
           <div class="bind">
+            <span class="tit">시설물 종류</span>
+            <select class="selectbox bordered" style="width: 180px;"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
+              <option>VMS</option>
+              <option>음성안내장치</option>
+              <option>집중조명</option>
+              <option>바닥유도등</option>
+            </select>
+          </div>
+          <!-- //bind -->
+          <div class="bind">
             <span class="tit">구분</span>
-            <select class="selectbox bordered" style="width: 216px;"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
+            <select class="selectbox bordered" style="width: 180px;"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
               <option>신호</option>
               <option>등기신호</option>
               <option>비신호</option>
             </select>
+            <button type="button" class="btn-default bordered">조회</button>
           </div>
           <!-- //bind -->
         </div>
@@ -39,94 +50,115 @@
           </div>
         </div>
         <!-- //tbl-list-header -->
-
-        <div class="tbl-sticky type2 is-filter" data-componant="facility-control">
-          <div class="tbl-sticky-inner">
-            <header class="header-bg"></header>
-            <table class="tbl-bordered-bot">
-              <colgroup>
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-                <col style="width:10%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th><span style="width:10%">시나리오</span></th>
-                  <th><span style="width:10%">VMS</span></th>
-                  <th><span style="width:10%">시나리오</span></th>
-                  <th><span style="width:10%">음성안내 장치</span></th>
-                  <th><span style="width:10%">시나리오</span></th>
-                  <th><span style="width:10%">바닥유도등</span></th>
-                  <th><span style="width:10%">시나리오</span></th>
-                  <th><span style="width:10%">집중조명</span></th>
-                  <th><span style="width:10%">미리보기</span></th>
-                  <th><span style="width:10%">편집</span></th>
-                </tr>
-              </thead>
-              <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
-              <tbody>
-                <tr>
-                  <td>000000</td>
-                  <td>code.vm.1</td>
-                  <td>0000</td>
-                  <td>code.vg.1</td>
-                  <td>000</td>
-                  <td>code.gl.1</td>
-                  <td>000</td>
-                  <td>code.ir.1</td>
-                  <td>
-                    <a href="#" class="btn-show">SHOW</a>
-                  </td>
-                  <td>
-                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>000000</td>
-                  <td>code.vm.1</td>
-                  <td>0000</td>
-                  <td>code.vg.1</td>
-                  <td>000</td>
-                  <td>code.gl.1</td>
-                  <td>000</td>
-                  <td>code.ir.1</td>
-                  <td>
-                    <a href="#" class="btn-show">SHOW</a>
-                  </td>
-                  <td>
-                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>000000</td>
-                  <td>code.vm.1</td>
-                  <td>0000</td>
-                  <td>code.vg.1</td>
-                  <td>000</td>
-                  <td>code.gl.1</td>
-                  <td>000</td>
-                  <td>code.ir.1</td>
-                  <td>
-                    <a href="#" class="btn-show">SHOW</a>
-                  </td>
-                  <td>
-                    <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- //tbl-bordered-bot -->
+        
+        <div class="list-division" data-componant="facility-control">
+          <div class="ly-left tbl-sticky type2 is-filter">
+            <div class="tbl-sticky-inner">
+              <header class="header-bg"></header>
+              <table class="tbl-bordered-bot">
+                <colgroup>
+                  <col style="width:33.33%">
+                  <col style="width:33.33%">
+                  <col style="width:33.33%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th><span style="width:33.33%">구분</span></th>
+                    <th><span style="width:33.33%">시나리오</span></th>
+                    <th><span style="width:33.33%">코드</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>신호</td>
+                    <td>000000</td>
+                    <td>code.vm.1</td>
+                  </tr>
+                  <tr>
+                    <td>신호</td>
+                    <td>000000</td>
+                    <td>code.vm.3</td>
+                  </tr>
+                  <tr>
+                    <td>신호</td>
+                    <td>000000</td>
+                    <td>없음</td>
+                  </tr>
+                  <tr>
+                    <td>신호</td>
+                    <td>000000</td>
+                    <td>code.vm.1</td>
+                  </tr>
+                  <tr>
+                    <td>신호</td>
+                    <td>000000</td>
+                    <td>code.vm.3</td>
+                  </tr>
+                  <tr>
+                    <td>신호</td>
+                    <td>000000</td>
+                    <td>없음</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- //tbl-bordered-bot -->
+            </div>
+            <!-- //tbl-sticky-inner -->
           </div>
-          <!-- //tbl-sticky-inner -->
+          <!-- //ly-left -->
+          
+          <div class="ly-right">
+            <div class="fc-confirm">
+              <div class="result">
+                <span>신호</span>
+                <span>000000</span>
+                <span>code.vm.1</span>
+              </div>
+              <span class="btn-inline-group">
+                <button type="button" class="btn-default bg-blue2">초기화</button>
+                <button type="button" class="btn-default bg-blue2">저장</button>
+              </span>
+            </div>
+            <!-- //fc-confirm -->
+
+            <div class="fc-list">
+              <h3>시설물 동작 관리목록</h3>
+              <ul>
+                <li>
+                  <span class="code">code.vm.1</span>
+                  <span class="txt">/F0007/E0606/S0800/C1보행자 /C2횡단 /C3안전운전 /C4하세요. /C5차량 /C6정지선 /C7지켜주세요.</span>
+                </li>
+                <li>
+                  <span class="code">code.vm.2</span>
+                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                </li>
+                <li>
+                  <span class="code">code.vm.3</span>
+                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                </li>
+                <li>
+                  <span class="code">code.vm.4</span>
+                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                </li>
+                <li>
+                  <span class="code">code.vm.5</span>
+                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                </li>
+              </ul>
+            </div>
+            <!-- //fc-list -->
+
+            <div class="fc-vms">
+              <h3>시설물 동작 미리보기</h3>
+              <div class="facility-vms lg">
+                <p><em>안전운전</em> 해주세요</p>
+              </div>
+            </div>
+            <!-- //fc-vms -->
+          </div>
+          <!-- //ly-right -->
         </div>
-        <!-- //tbl-sticky -->
+        <!-- //list-division -->
       </section>
       <!-- //list-type-wrap -->
     </main>

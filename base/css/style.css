@@ -283,25 +283,25 @@ a, span, em, button, label, i, b, strong {
 
 @-webkit-keyframes marquee {
   from {
-    -webkit-transform: translate(0%);
-            transform: translate(0%);
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
   }
   99%,
   to {
-    -webkit-transform: translate(-100%);
-            transform: translate(-100%);
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
   }
 }
 
 @keyframes marquee {
   from {
-    -webkit-transform: translate(0%);
-            transform: translate(0%);
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
   }
   99%,
   to {
-    -webkit-transform: translate(-100%);
-            transform: translate(-100%);
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
   }
 }
 
@@ -399,6 +399,45 @@ footer .copylight {
 
 footer .copylight.bg-gray2 {
   color: #2d2f30;
+}
+
+.list-division {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.list-division .ly-left {
+  width: 515px;
+}
+
+.list-division .ly-right {
+  width: calc(100% - 535px);
+}
+
+.list-division h2,
+.list-division h3 {
+  margin: 18px 0 13px;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.list-division h2::before,
+.list-division h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: -5px 5px 0 0;
+  vertical-align: middle;
+  background: #181616;
 }
 
 /* ###############################
@@ -594,7 +633,7 @@ footer .copylight.bg-gray2 {
   padding: 0 0 26px;
 }
 
-.modal-primary + a.close-modal {
+.modal-primary ~ a.close-modal {
   top: 3px;
   background-image: url(/base/images/btn_close_white.png);
 }
@@ -1861,6 +1900,14 @@ footer .copylight.bg-gray2 {
   color: #1aba0d;
 }
 
+.facility-vms.lg {
+  line-height: 100px;
+}
+
+.facility-vms.lg p {
+  font-size: 30px;
+}
+
 .facility-audio-guidance {
   line-height: 50px;
   text-align: center;
@@ -1878,6 +1925,99 @@ footer .copylight.bg-gray2 {
   line-height: 50px;
   text-align: center;
   border: 1px solid #c4c4c4;
+}
+
+.fc-confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #c4c4c4;
+}
+
+.fc-confirm .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.fc-confirm .result span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  display: block;
+  margin-right: 5px;
+  padding: 0 12px;
+  line-height: 41px;
+  border: 1px solid #2d2f30;
+}
+
+.fc-confirm .btn-inline-group .btn-default:first-child {
+  margin-right: 10px;
+}
+
+.fc-list ul {
+  overflow-y: auto;
+  height: 241px;
+  border-top: 1px solid #2d2f30;
+  border-bottom: 1px solid #2d2f30;
+}
+
+.fc-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 13px 0;
+}
+
+.fc-list ul li + li {
+  border-top: 1px solid #c4c4c4;
+}
+
+.fc-list ul li .code {
+  -ms-flex-preferred-size: 17%;
+      flex-basis: 17%;
+  text-align: center;
+}
+
+.fc-list ul li .txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.fc-vms .facility-vms p {
+  color: #1aba0d;
+}
+
+.fc-vms .facility-vms p em {
+  color: #ff1f00;
 }
 
 /* 컴포넌트 사이즈 정의 */
@@ -1918,7 +2058,7 @@ footer .copylight.bg-gray2 {
 }
 
 [data-componant="traffic"] tbody td {
-  line-height: 41px;
+  line-height: 49px;
 }
 
 [data-componant="traffic"] tbody td span {
@@ -1949,7 +2089,7 @@ footer .copylight.bg-gray2 {
 }
 
 [data-componant="gumji-info"] .tbl-sticky-inner {
-  height: 557px;
+  height: 549px;
   border: 1px solid #c4c4c4;
   border-bottom: 0;
 }
@@ -2454,16 +2594,22 @@ footer .copylight.bg-gray2 {
   padding-right: 10px !important;
 }
 
-[data-componant="facility-control"] tbody td {
+[data-componant="facility-control"] .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 428px) !important;
+}
+
+[data-componant="facility-control"] .ly-left tbody td {
   padding: 8.5px 0;
 }
 
-[data-componant="facility-control"] tbody td:not(:first-child) {
+[data-componant="facility-control"] .ly-left tbody td:not(:first-child) {
   border-left: 1px solid #c4c4c4;
 }
 
-[data-componant="facility-control"] tbody td:nth-child(even) {
-  border-left: 0;
+[data-componant="facility-control"] .ly-right {
+  margin-left: 20px;
+  padding: 15px;
+  border: 1px solid #c4c4c4;
 }
 
 /* 원격전원제어 및 RCU */
@@ -2723,7 +2869,7 @@ footer .copylight.bg-gray2 {
   }
   /* 검지정보 > 우측 하단 리스트 */
   [data-componant="gumji-info"] .tbl-sticky-inner {
-    height: 560px;
+    height: 552px;
   }
   /* 연계동작상태 > 우측 하단 리스트 */
   [data-componant="monitering-connect"] {
