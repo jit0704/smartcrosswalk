@@ -43,118 +43,178 @@
         </div>
         <!-- //filter-group -->
 
-        <div class="tbl-list-header type2">
+        <!-- 211011 삭제 -->
+        <!-- <div class="tbl-list-header type2">
           <h2>시설물 제어 관리</h2>
           <div class="btn-inline-group">
             <a href="#" class="btn-question"><span class="hidden">help</span></a>
           </div>
-        </div>
+        </div> -->
         <!-- //tbl-list-header -->
         
         <div class="list-division" data-componant="facility-control">
-          <div class="ly-left tbl-sticky type2 is-filter">
-            <div class="tbl-sticky-inner">
-              <header class="header-bg"></header>
-              <table class="tbl-bordered-bot">
-                <colgroup>
-                  <col style="width:33.33%">
-                  <col style="width:33.33%">
-                  <col style="width:33.33%">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th><span style="width:33.33%">구분</span></th>
-                    <th><span style="width:33.33%">시나리오</span></th>
-                    <th><span style="width:33.33%">코드</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>신호</td>
-                    <td>000000</td>
-                    <td>code.vm.1</td>
-                  </tr>
-                  <tr>
-                    <td>신호</td>
-                    <td>000000</td>
-                    <td>code.vm.3</td>
-                  </tr>
-                  <tr>
-                    <td>신호</td>
-                    <td>000000</td>
-                    <td>없음</td>
-                  </tr>
-                  <tr>
-                    <td>신호</td>
-                    <td>000000</td>
-                    <td>code.vm.1</td>
-                  </tr>
-                  <tr>
-                    <td>신호</td>
-                    <td>000000</td>
-                    <td>code.vm.3</td>
-                  </tr>
-                  <tr>
-                    <td>신호</td>
-                    <td>000000</td>
-                    <td>없음</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- //tbl-bordered-bot -->
+          <div class="ly-left"> <!-- 211011 div 추가 -->
+            <!-- 211011 컨텐츠 제목 추가 -->
+            <div class="tbl-list-header type2">
+              <h2>시설물 제어 관리</h2>
             </div>
-            <!-- //tbl-sticky-inner -->
+            <!-- //tbl-list-header -->
+            <div class="tbl-sticky type2 is-filter"> <!-- 211011 ly-left 클래스 삭제 -->
+              <div class="tbl-sticky-inner">
+                <header class="header-bg"></header>
+                <table class="tbl-bordered-bot">
+                  <colgroup>
+                    <col style="width:33.33%">
+                    <col style="width:33.33%">
+                    <col style="width:33.33%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th><span style="width:33.33%">구분</span></th>
+                      <th><span style="width:33.33%">시나리오</span></th>
+                      <th><span style="width:33.33%">코드</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>신호</td>
+                      <td>000000</td>
+                      <td>code.vm.1</td>
+                    </tr>
+                    <tr>
+                      <td>신호</td>
+                      <td>000000</td>
+                      <td>code.vm.3</td>
+                    </tr>
+                    <tr>
+                      <td>신호</td>
+                      <td>000000</td>
+                      <td>없음</td>
+                    </tr>
+                    <tr>
+                      <td>신호</td>
+                      <td>000000</td>
+                      <td>code.vm.1</td>
+                    </tr>
+                    <tr>
+                      <td>신호</td>
+                      <td>000000</td>
+                      <td>code.vm.3</td>
+                    </tr>
+                    <tr>
+                      <td>신호</td>
+                      <td>000000</td>
+                      <td>없음</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- //tbl-bordered-bot -->
+              </div>
+              <!-- //tbl-sticky-inner -->
+            </div>
+            <!-- //tbl-sticky -->
           </div>
           <!-- //ly-left -->
           
           <div class="ly-right">
-            <div class="fc-confirm">
-              <div class="result">
-                <span>신호</span>
-                <span>000000</span>
-                <span>code.vm.1</span>
-              </div>
-              <span class="btn-inline-group">
-                <button type="button" class="btn-default bg-blue2">초기화</button>
-                <button type="button" class="btn-default bg-blue2">저장</button>
-              </span>
-            </div>
-            <!-- //fc-confirm -->
-
-            <div class="fc-list">
-              <h3>시설물 동작 관리목록</h3>
-              <ul>
-                <li>
-                  <span class="code">code.vm.1</span>
-                  <span class="txt">/F0007/E0606/S0800/C1보행자 /C2횡단 /C3안전운전 /C4하세요. /C5차량 /C6정지선 /C7지켜주세요.</span>
-                </li>
-                <li>
-                  <span class="code">code.vm.2</span>
-                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
-                </li>
-                <li>
-                  <span class="code">code.vm.3</span>
-                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
-                </li>
-                <li>
-                  <span class="code">code.vm.4</span>
-                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
-                </li>
-                <li>
-                  <span class="code">code.vm.5</span>
-                  <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
-                </li>
-              </ul>
-            </div>
-            <!-- //fc-list -->
-
-            <div class="fc-vms">
-              <h3>시설물 동작 미리보기</h3>
-              <div class="facility-vms lg">
-                <p><em>안전운전</em> 해주세요</p>
+            <!-- 211011 컨텐츠 제목 추가 -->
+            <div class="tbl-list-header type2">
+              <h2>시설물 동작 코드 선택</h2>
+              <div class="btn-inline-group">
+                <a href="#" class="btn-question"><span class="hidden">help</span></a>
               </div>
             </div>
-            <!-- //fc-vms -->
+            <!-- //tbl-list-header -->
+            <div class="inner"> <!-- 211011 div 추가 -->
+              <!-- 211011 시설물 동작 코드 선택 박스 수정 -->
+              <div class="filter-group type2">
+                <div class="left">
+                  <div class="bind">
+                    <span class="tit">구분 :</span>
+                    <em class="txt">신호</em>
+                  </div>
+                  <!-- //bind -->
+                  <div class="bind">
+                    <span class="tit">시나리오 :</span>
+                    <em class="txt">000000</em>
+                  </div>
+                  <!-- //bind -->
+                  <div class="bind">
+                    <span class="tit">코드 :</span>
+                    <em class="output">code.vm.1</em>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //left -->
+                <span class="right btn-inline-group">
+                  <button type="button" class="btn-default bg-blue2">초기화</button>
+                  <button type="button" class="btn-default bg-blue2">저장</button>
+                </span>
+                <!-- //right -->
+              </div>
+              <!-- //filter-group -->
+
+              <div class="fc-list">
+                <ul>
+                  <li>
+                    <span class="code">code.vm.1</span>
+                    <span class="txt">/F0007/E0606/S0800/C1보행자 /C2횡단 /C3안전운전 /C4하세요. /C5차량 /C6정지선 /C7지켜주세요.</span>
+                  </li>
+                  <li>
+                    <span class="code">code.vm.2</span>
+                    <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                  </li>
+                  <li>
+                    <span class="code">code.vm.3</span>
+                    <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                  </li>
+                  <li>
+                    <span class="code">code.vm.4</span>
+                    <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                  </li>
+                  <li>
+                    <span class="code">code.vm.5</span>
+                    <span class="txt">/F0007/E0606/S0800/C4보행자가 대기중/C2이니 /C3안전운행 /C2해주세요.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- //fc-list -->
+
+              <div class="fc-vms">
+                <h3>시설물 동작 미리보기</h3>
+                <!-- 211011 색상을 정의한 class명을 추가하면 해당 색상이 적용된 텍스트가 노출될 수 있게 수정 -->
+                <div class="facility-vms lg">
+                  <p class="global-c-red"><em class="global-c-green">안전운전</em> 해주세요</p>
+                  <!-- 
+                    <텍스트 색상 class명>
+                    빨간색 : global-c-red
+                    녹색   : global-c-green
+                    노란색 : global-c-yellow
+                    파란색 : global-c-blue
+                    보라색 : global-c-violet
+                    하늘색 : global-c-skyblue
+                    흰색   : global-c-white
+                  -->
+                </div>
+              </div>
+              <!-- //fc-vms -->
+
+              <div class="fc-audio-guidance">
+                <h3>음성안내장치 동작 미리보기</h3>
+                <div class="facility-audio-guidance lg">
+                  <p>다음 신호에 건너세요</p>
+                </div>
+              </div>
+
+              <div class="fc-lighting">
+                <h3>집중조명 동작 미리보기</h3>
+                <div class="facility-lighting lg" style="background: rgba(255, 194, 39, 0.7);">
+                  <p>100%</p>
+                </div>
+              </div>
+
+            </div>
+            <!-- //inner -->
           </div>
           <!-- //ly-right -->
         </div>
