@@ -2500,11 +2500,15 @@ footer .copylight.bg-gray2 {
 }
 
 .login.demo .loginbox-input2.warning + .validation-warning {
-  margin-top: 5px;
   visibility: visible;
 }
 
+.login.demo .validation-warning {
+  margin-top: 5px;
+}
+
 .login.demo .btn-block {
+  margin-top: 20px;
   font-weight: 700;
   padding-top: 17px;
   padding-bottom: 17px;
