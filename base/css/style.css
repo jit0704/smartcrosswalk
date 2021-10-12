@@ -2705,8 +2705,7 @@ footer .copylight.bg-gray2 {
 
 [data-componant="facility-control"] .ly-left tbody td {
   padding: 8.5px 0;
-  border-top: 0 !important;
-  border-bottom: 0 !important;
+  border-left: 0 !important;
 }
 
 [data-componant="facility-control"] .ly-left tbody td:not(:first-child) {
