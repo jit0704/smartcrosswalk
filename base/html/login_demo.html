@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>로그인</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="login demo">
+      <div class="login-box">
+        <div class="bind">
+          <span class="loginbox-input2 id warning"> <!-- 아이디, 비번 오류시 warning클래스 추가 -->
+            <input type="text" placeholder="아이디">
+          </span>
+          <em class="validation-warning">* 아이디를 다시 입력해주세요.</em>
+        </div>
+        <!-- //bind -->
+
+        <div class="bind">
+          <span class="loginbox-input2 pwd warning"> <!-- 아이디, 비번 오류시 warning클래스 추가 -->
+            <input type="password" placeholder="비밀번호">
+          </span>
+          <em class="validation-warning">* 비밀번호를 다시 입력해주세요.</em>
+        </div>
+        <!-- //bind -->
+        
+        <a href="#" class="btn-block c-skyblue">로그인</a>
+      </div>
+      <!-- //login-box -->
+    </div>
+    <!-- //login -->
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>
