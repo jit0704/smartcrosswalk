@@ -259,6 +259,10 @@ a, span, em, button, label, i, b, strong {
   background-color: #fbff39 !important;
 }
 
+.bg-banana {
+  background-color: #fbb03f !important;
+}
+
 .bg-orange {
   background-color: #ffc227 !important;
 }
@@ -279,6 +283,14 @@ a, span, em, button, label, i, b, strong {
   background-color: #c4c4c4 !important;
 }
 
+.bg-gray3 {
+  background-color: #979797 !important;
+}
+
+.bg-gray4 {
+  background-color: #575757 !important;
+}
+
 .bg-violet {
   background-color: #a129eb !important;
 }
@@ -289,6 +301,10 @@ a, span, em, button, label, i, b, strong {
 
 .bg-brown {
   background-color: #5f1919 !important;
+}
+
+.bg-black2 {
+  background-color: #181616 !important;
 }
 
 @-webkit-keyframes fadeIn {
@@ -330,6 +346,36 @@ a, span, em, button, label, i, b, strong {
   to {
     -webkit-transform: translate(0%);
             transform: translate(0%);
+  }
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -722,6 +768,14 @@ footer .copylight.bg-gray2 {
   display: flex;
 }
 
+.divider {
+  width: 100%;
+  height: 2px;
+  margin: 5px 0 0;
+  border: 0;
+  background: #26bcd1;
+}
+
 .logo {
   width: 175px;
   height: 46px;
@@ -1059,7 +1113,7 @@ footer .copylight.bg-gray2 {
   background: #2d85c5;
 }
 
-.list-type-wrap .block-group + .block-group {
+.list-type-wrap .block-group ~ .block-group {
   margin-top: 70px;
 }
 
@@ -1214,6 +1268,36 @@ footer .copylight.bg-gray2 {
 
 .tbl-list-header.type2 .btn-inline-group .btn-question {
   margin-right: 0;
+}
+
+.flicker-group {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.flicker-group .ic-state-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: flicker 3s infinite;
+          animation: flicker 3s infinite;
+}
+
+.flicker-group .ic-state-circle:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.flicker-group .ic-state-circle:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.flicker-group .ic-state-circle:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 /* ###############################
@@ -1485,6 +1569,22 @@ footer .copylight.bg-gray2 {
   background-size: contain;
 }
 
+.ic-wowpoint.gray {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  background: url(/base/images/traffic_lights_icon/ic_wowpoint_gray.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.ic-wowpoint.yellow {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  background: url(/base/images/traffic_lights_icon/ic_wowpoint_yellow.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 .ic-state-circle {
   width: 32px;
   height: 32px;
@@ -1495,11 +1595,83 @@ footer .copylight.bg-gray2 {
 }
 
 .ic-state-circle.front {
-  background-image: url(/base/images/ic_car_front.png);
+  background-image: url(/base/images/traffic_lights_icon/ic_car_front.png);
+}
+
+.ic-state-circle.side {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_side.png);
+}
+
+.ic-state-circle.stand {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_stand.png);
 }
 
 .ic-state-circle.walk {
-  background-image: url(/base/images/ic_man_walk.png);
+  background-image: url(/base/images/traffic_lights_icon/ic_man_walk.png);
+}
+
+.ic-state-circle.front-gray {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_front_gray.png);
+}
+
+.ic-state-circle.side-gray {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_side_gray.png);
+}
+
+.ic-state-circle.stand-gray {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_stand_gray.png);
+}
+
+.ic-state-circle.walk-gray {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_walk_gray.png);
+}
+
+.ic-state-circle.front-red {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_front_red.png);
+}
+
+.ic-state-circle.side-red {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_side_red.png);
+}
+
+.ic-state-circle.stand-red {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_stand_red.png);
+}
+
+.ic-state-circle.walk-red {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_walk_red.png);
+}
+
+.ic-state-circle.front-green {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_front_green.png);
+}
+
+.ic-state-circle.side-green {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_side_green.png);
+}
+
+.ic-state-circle.stand-green {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_stand_green.png);
+}
+
+.ic-state-circle.walk-green {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_walk_green.png);
+}
+
+.ic-state-circle.front-orange {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_front_orange.png);
+}
+
+.ic-state-circle.side-orange {
+  background-image: url(/base/images/traffic_lights_icon/ic_car_side_orange.png);
+}
+
+.ic-state-circle.stand-orange {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_stand_orange.png);
+}
+
+.ic-state-circle.walk-orange {
+  background-image: url(/base/images/traffic_lights_icon/ic_man_walk_orange.png);
 }
 
 /* ###############################

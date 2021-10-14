@@ -184,8 +184,22 @@
                 <h3>시설물 동작 미리보기</h3>
                 <!-- 211011 색상을 정의한 class명을 추가하면 해당 색상이 적용된 텍스트가 노출될 수 있게 수정 -->
                 <div class="facility-vms lg">
-                  <p class="global-c-red"><em class="global-c-green">안전운전</em> 해주세요</p>
+                  <p class="global-c-red" style="animation: marquee 4s linear infinite;"><em class="global-c-green">안전운전</em> 해주세요</p>
                   <!-- 
+                    <style속성의 animation 속성 설명>
+                    1. 문구 방향 설정
+                      - 왼쪽 → 오른쪽 : animation: marquee 4s linear infinite;
+                      - 오른쪽 → 왼쪽 : animation: marquee 4s linear infinite reverse;
+
+                    2. 문구 이동 속도 : 현재 4s(4초)로 되어있는데 이 부분을 수정 해주시면 됩니다. 1초 미만은 소수점은 0.5s, 0.7s 등 으로 나타낼 수 있습니다(1.5s, 2.3s 이런식으로도 가능). 시간의 숫자 값이 작아지면 속도는 빨라지고 숫자가 클수록 속도는 느려집니다.
+
+                    3. 문구 배경색 설정 : facility-vms 요소에 style 속성 또는 아래에 나와있는 클래스명을 추가하여 사용하셔도 됩니다.
+                      - style속성으로 표기(16진수 방식 또는 rgb방식)도 가능
+                      - 16진수 방식 : ex) style="background: #ddd;"
+                      - rgb방식     : ex) style="background: rgb(255, 255, 255);"
+                    
+                    4. 모니터링 > 연계동작상태(monitering_connect.html) 화면의 VMS 문구도 위와 동일합니다.
+
                     <텍스트 색상 class명>
                     빨간색 : global-c-red
                     녹색   : global-c-green

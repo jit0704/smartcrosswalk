@@ -43,19 +43,18 @@
 
           <div class="tbl-bordered txt-center">
             <table>
+              <!-- 211014 수정 -->
               <colgroup>
                 <col style="width:30%;">
                 <col style="width:20%;">
-                <col style="width:15%;">
-                <col style="width:20%;">
-                <col style="width:15%;">
+                <col style="width:25%;">
+                <col style="width:25%;">
               </colgroup>
               <thead>
                 <tr>
                   <th>총 소모전력</th>
                   <th>전원</th>
                   <th>명칭</th>
-                  <th>상태</th>
                   <th>ON / OFF</th>
                 </tr>
               </thead>
@@ -64,7 +63,6 @@
                   <td rowspan="4" class="border-bot">전력 눈금 표시<br>추후 작업 예정</td>
                   <td class="border-left">PW1</td>
                   <td><input type="text" class="input-txt type2"></td>
-                  <td>On</td>
                   <td>
                     <label class="switch">
                       <input type="checkbox" class="hidden">
@@ -75,7 +73,6 @@
                 <tr>
                   <td>PW1</td>
                   <td><input type="text" class="input-txt type2"></td>
-                  <td>On</td>
                   <td>
                     <label class="switch">
                       <input type="checkbox" class="hidden">
@@ -86,7 +83,6 @@
                 <tr>
                   <td>PW1</td>
                   <td><input type="text" class="input-txt type2"></td>
-                  <td>On</td>
                   <td>
                     <label class="switch">
                       <input type="checkbox" class="hidden">
@@ -97,7 +93,6 @@
                 <tr>
                   <td>PW1</td>
                   <td><input type="text" class="input-txt type2"></td>
-                  <td>On</td>
                   <td>
                     <label class="switch">
                       <input type="checkbox" class="hidden">
@@ -111,6 +106,8 @@
           <!-- //tbl-bordered -->
         </article>
         <!-- //block-group -->
+
+        <hr class="divider"> <!-- 211014 구분선 추가 -->
 
         <article class="block-group">
           <div class="filter-group type3">
@@ -128,21 +125,18 @@
 
           <div class="tbl-bordered txt-center">
             <table>
+              <!-- 211014 수정 -->
               <colgroup>
-                <col style="width:16.66%;">
-                <col style="width:24.66%;">
-                <col style="width:14.66%;">
-                <col style="width:14.66%;">
-                <col style="width:14.66%;">
-                <col style="width:14.66%;">
+                <col style="width:25%;">
+                <col style="width:25%;">
+                <col style="width:25%;">
+                <col style="width:25%;">
               </colgroup>
               <thead>
                 <tr>
                   <th>모듈</th>
                   <th>Mode</th>
-                  <th>정지온도</th>
-                  <th>동작온도</th>
-                  <th>상태</th>
+                  <th>설정온도</th>
                   <th>ON / OFF</th>
                 </tr>
               </thead>
@@ -159,10 +153,8 @@
                       <span class="txt">manual</span>
                     </label>
                   </td>
-                  <td class="border-left"><input type="text" class="input-txt type2" style="width:122px;"></td>
-                  <td><input type="text" class="input-txt type2" style="width:122px;"></td>
-                  <td>On</td>
-                  <td>
+                  <td class="border-left"><input type="text" class="input-txt type2 txt-center" style="width:150px;"></td> <!-- txt-center 클래스 추가 -->
+                  <td class="border-left"> <!-- 211014 border-left 클래스 추가 -->
                     <label class="switch">
                       <input type="checkbox" class="hidden">
                       <span class="slider"></span>
@@ -171,10 +163,8 @@
                 </tr>
                 <tr>
                   <td>Pan</td>
-                  <td class="border-left"><input type="text" class="input-txt type2" style="width:122px;"></td>
-                  <td><input type="text" class="input-txt type2" style="width:122px;"></td>
-                  <td>On</td>
-                  <td>
+                  <td class="border-left"><input type="text" class="input-txt type2 txt-center" style="width:150px;"></td> <!-- txt-center 클래스 추가 -->
+                  <td class="border-left"> <!-- 211014 border-left 클래스 추가 -->
                     <label class="switch">
                       <input type="checkbox" class="hidden">
                       <span class="slider"></span>
@@ -203,8 +193,8 @@
               <tbody>
                 <tr>
                   <td>상태</td>
-                  <td class="border-left">Open</td>
-                  <td class="border-left">Closed</td>
+                  <td>Open</td> <!-- 211014 border-left 클래스 삭제 -->
+                  <td>Closed</td> <!-- 211014 border-left 클래스 삭제 -->
                 </tr>
               </tbody>
             </table>
