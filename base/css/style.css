@@ -1687,6 +1687,14 @@ footer .copylight.bg-gray2 {
   background: #fff;
 }
 
+.input-txt:-moz-read-only {
+  background: #ECF0F1;
+}
+
+.input-txt:read-only {
+  background: #ECF0F1;
+}
+
 .input-txt.type2 {
   height: 38px;
   border-radius: 0;
@@ -2465,6 +2473,10 @@ footer .copylight.bg-gray2 {
   text-align: center;
 }
 
+.tbl-sticky tbody .no-data {
+  height: 112px;
+}
+
 .tbl-sticky tbody tr:first-child td {
   border-top: 1px solid transparent;
 }
@@ -2915,6 +2927,82 @@ footer .copylight.bg-gray2 {
 
 .remote-control .tbl-bordered .radio-default + .radio-default {
   margin-left: 83px;
+}
+
+.electricity-display {
+  position: relative;
+  top: -15px;
+  width: 307px;
+  height: 171px;
+  margin: 0 auto;
+  background: url(/base/images/bg_gauge.png) no-repeat 0 100%;
+  background-size: contain;
+  --gauge-value:0;
+}
+
+.electricity-display .needle {
+  -webkit-transform: rotate(calc(180deg * calc(var(--gauge-value,0deg)/ 100) - 0deg));
+      -ms-transform: rotate(calc(180deg * calc(var(--gauge-value,0deg)/ 100) - 0deg));
+          transform: rotate(calc(180deg * calc(var(--gauge-value,0deg)/ 100) - 0deg));
+  position: relative;
+  left: 0;
+  top: 97%;
+  width: 100%;
+  height: 11px;
+  background: url(/base/images/ic_needle.png) no-repeat 20% 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.electricity-display .value-txt {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  color: #2d2f30;
+  font-weight: 800;
+}
+
+.electricity-display .num {
+  color: #2d2f30;
+  font-weight: 800;
+}
+
+.electricity-display .num1 {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}
+
+.electricity-display .num2 {
+  position: absolute;
+  bottom: 55px;
+  left: 44px;
+}
+
+.electricity-display .num3 {
+  position: absolute;
+  top: 48px;
+  left: 88px;
+}
+
+.electricity-display .num4 {
+  position: absolute;
+  top: 48px;
+  right: 87px;
+}
+
+.electricity-display .num5 {
+  position: absolute;
+  bottom: 55px;
+  right: 55px;
+}
+
+.electricity-display .num6 {
+  position: absolute;
+  bottom: 0;
+  right: 38px;
 }
 
 /* help팝업 */

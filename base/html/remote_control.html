@@ -60,7 +60,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="4" class="border-bot">전력 눈금 표시<br>추후 작업 예정</td>
+                  <td rowspan="4" class="border-bot">
+                    <!-- 211019 총 소모전력 추가 -->
+                    <div class="electricity-display">
+                      <div class="num">
+                        <span class="num1">0</span>
+                        <span class="num2">200</span>
+                        <span class="num3">400</span>
+                        <span class="num4">600</span>
+                        <span class="num5">800</span>
+                        <span class="num6">1000</span>
+                      </div>
+                      <span class="needle"></span>
+                      <span class="value-txt">0W</span>
+                      <input type="hidden" class="guage-val" value="500"> <!-- value 속성에 개발 데이터 값을 넣어주시면 됩니다. -->
+                    </div>
+                  </td>
                   <td class="border-left">PW1</td>
                   <td><input type="text" class="input-txt type2"></td>
                   <td>
@@ -211,5 +226,20 @@
     <!-- //footer -->
   </div>
   <!-- //wrapper -->
+
+  <script>
+    $(function(){
+      // 211019 추가 : 소모 전력 눈금 표시
+      function electricityGuage (min, max) {
+        var valueNum = $('.guage-val').attr('value');
+        var gaugeCalc = Math.floor(((valueNum - min) / (max - min)) * 100);
+        setTimeout(function(){
+          $('.electricity-display').css('--gauge-value', gaugeCalc);
+          $('.electricity-display .value-txt').text(valueNum + 'W');
+        }, 50);
+      }
+      electricityGuage(0, 1000);
+    });
+  </script>
 </body>
 </html>
