@@ -1529,7 +1529,7 @@ footer .copylight.bg-gray2 {
 }
 
 .btn-block.lg {
-  padding: 18px 0;
+  padding: 16px 0;
   line-height: 20px;
   font-size: 20px;
   font-weight: 700;
@@ -2554,6 +2554,11 @@ footer .copylight.bg-gray2 {
   margin: 0 auto;
 }
 
+.login-box-title {
+  text-align: center;
+  color: #fff;
+}
+
 .login-inputbox {
   position: relative;
   margin: 50px 0 30px;
@@ -2710,6 +2715,29 @@ footer .copylight.bg-gray2 {
   font-weight: 700;
   padding-top: 17px;
   padding-bottom: 17px;
+}
+
+/* 아이디 찾기, 결과 팝업 */
+.id-search .loginbox-input input {
+  padding-left: 15px;
+}
+
+.id-search .loginbox-input::before {
+  display: none;
+}
+
+.id-search .btn-block.bordered {
+  margin-right: 15px;
+  background: #fff;
+}
+
+.id-result .modal-content {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.id-result .modal-btn-group {
+  margin: 0;
 }
 
 /* 모니터링 */
