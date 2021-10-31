@@ -179,6 +179,10 @@ a, span, em, button, label, i, b, strong {
   margin-top: 10px !important;
 }
 
+.mt15 {
+  margin-top: 15px !important;
+}
+
 .mb12 {
   margin-bottom: 12px !important;
 }
@@ -2440,6 +2444,65 @@ footer .copylight.bg-gray2 {
   border-bottom: 1px solid #c4c4c4;
 }
 
+.tbl-bordered.type2 th,
+.tbl-bordered.type2 td {
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: left;
+}
+
+.tbl-bordered.type2 .th-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tbl-bordered.type2 .th-bind .btn-default {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0;
+  background: #fff;
+  font-weight: 700;
+}
+
+.tbl-bordered.type2 .th-bind .btn-default + .btn-default {
+  margin-left: 10px;
+}
+
+.tbl-bordered.type2 thead th:first-child {
+  border-right: 1px solid #c4c4c4;
+}
+
+.tbl-bordered.type2 tbody th {
+  border-left: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.tbl-bordered.type2 tbody th + td {
+  border-right: 1px solid #c4c4c4;
+}
+
+.tbl-bordered.type2 tbody td[rowspan] {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.tbl-bordered.type2 tbody .explain {
+  padding-top: 17px;
+  line-height: 25px;
+  vertical-align: top;
+  color: #0c4670;
+}
+
 .tbl-bordered-bot tbody tr:not(:first-child) td {
   border-top: 1px solid #c4c4c4;
 }
@@ -3041,6 +3104,30 @@ footer .copylight.bg-gray2 {
   position: absolute;
   bottom: 0;
   right: 38px;
+}
+
+/* 함체장치 고급 관리 */
+.device-highgrade .filter-group .tit {
+  font-weight: 400;
+  color: #181616;
+}
+
+.device-highgrade .tbl-bordered {
+  margin-top: 10px;
+}
+
+.device-highgrade .tbl-bordered.set-traffic .explain, .device-highgrade .tbl-bordered.Transmission .explain {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.device-highgrade .tbl-bordered.device-reset {
+  border-top: 1px solid #c4c4c4;
+}
+
+.device-highgrade .tbl-bordered.device-reset .explain {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* help팝업 */
