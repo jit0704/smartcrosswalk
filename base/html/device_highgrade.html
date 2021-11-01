@@ -33,231 +33,236 @@
         </div>
         <!-- //filter-group -->
 
-        <div class="tbl-bordered type2 set-devicdid">
-          <table>
-            <colgroup>
-              <col style="width:13%;">
-              <col style="width:65%;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th colspan="2">
-                  <div class="th-bind">
-                    <span>Device ID Setting</span>
-                    <div class="btn-inline-group">
-                      <button type="button" class="btn-default bordered">조회</button>
-                      <button type="button" class="btn-default bordered">셋팅</button>
+        <div class="inner">
+          <div class="tbl-bordered type2 set-ip">
+            <table>
+              <colgroup>
+                <col style="width:16%;">
+                <col style="width:43%;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    <div class="th-bind">
+                      <span>IP Setting</span>
+                      <div class="btn-inline-group">
+                        <button type="button" class="btn-default bordered">조회</button>
+                        <button type="button" class="btn-default bordered">셋팅</button>
+                      </div>
                     </div>
-                  </div>
-                </th>
-                <th class="txt-center">설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Device ID</th>
-                <td><input type="text" class="input-txt type2"></td>
-                <td class="explain">장비의 고유 번호를 설정한다. (범위 0 ~ 65535)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- //tbl-bordered -->
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>IP</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                  <td rowspan="4" class="explain">
+                    <p>장비의 IP를 설정한다.<br>Network Setting은 장비 재부팅 후 적용된다.</p>
+                    <p class="mt15">&lt;기본값&gt;</p>
+                    <ul>
+                      <li>- IP : 192.168.172.200</li>
+                      <li>- SubnetMask : 255.255.255.0</li>
+                      <li>- Gateway : 192.168.172.1</li>
+                      <li>- Port : 35010</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>PORT</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                </tr>
+                <tr>
+                  <th>Gateway</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                </tr>
+                <tr>
+                  <th>Subnet Mask</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-bordered -->
 
-        <div class="tbl-bordered type2 set-ip">
-          <table>
-            <colgroup>
-              <col style="width:13%;">
-              <col style="width:65%;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th colspan="2">
-                  <div class="th-bind">
-                    <span>IP Setting</span>
-                    <div class="btn-inline-group">
-                      <button type="button" class="btn-default bordered">조회</button>
-                      <button type="button" class="btn-default bordered">셋팅</button>
+          <div class="tbl-bordered type2 set-server">
+            <table>
+              <colgroup>
+                <col style="width:18%;">
+                <col style="width:38%;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    <div class="th-bind">
+                      <span>Server Connection Information Setting</span>
+                      <div class="btn-inline-group">
+                        <button type="button" class="btn-default bordered">셋팅</button>
+                      </div>
                     </div>
-                  </div>
-                </th>
-                <th class="txt-center">설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>IP</th>
-                <td><input type="text" class="input-txt type2"></td>
-                <td rowspan="4" class="explain">
-                  <p>장비의 IP를 설정한다.<br>Network Setting은 장비 재부팅 후 적용된다.</p>
-                  <p class="mt15">&lt;기본값&gt;</p>
-                  <ul>
-                    <li>- IP : 192.168.172.200</li>
-                    <li>- SubnetMask : 255.255.255.0</li>
-                    <li>- Gateway : 192.168.172.1</li>
-                    <li>- Port : 35010</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th>PORT</th>
-                <td><input type="text" class="input-txt type2"></td>
-              </tr>
-              <tr>
-                <th>Gateway</th>
-                <td><input type="text" class="input-txt type2"></td>
-              </tr>
-              <tr>
-                <th>Subnet Mask</th>
-                <td><input type="text" class="input-txt type2"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- //tbl-bordered -->
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Server IP 1</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                  <td rowspan="4" class="explain">
+                    <p>제어기가 Client로 동작 시 서버 IP 주소와 포트 값 설정한다.</p>
+                    <p class="mt10">&lt;기본값&gt;</p>
+                    <ul>
+                      <li>- Server 1 : 192.168.172.155 (Port 35000)</li>
+                      <li>- Server 2 : 192.168.172.156 (Port 35000)</li>
+                    </ul>
+                    <p class="mt10">Transmission Method가 1 또는 2로 설정된 경우, 설정된 IP 주소로 신호등 상태 값이 전송된다</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Server PORT 1</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                </tr>
+                <tr>
+                  <th>Server IP 2</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                </tr>
+                <tr>
+                  <th>Server PORT 2</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-bordered -->
 
-        <div class="tbl-bordered type2 set-server">
-          <table>
-            <colgroup>
-              <col style="width:13%;">
-              <col style="width:65%;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th colspan="2">
-                  <div class="th-bind">
-                    <span>Server Connection Information Setting</span>
-                    <div class="btn-inline-group">
-                      <button type="button" class="btn-default bordered">셋팅</button>
+          <div class="tbl-bordered type2 set-devicdid">
+            <table>
+              <colgroup>
+                <col style="width:16%;">
+                <col style="width:43%;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    <div class="th-bind">
+                      <span>Device ID Setting</span>
+                      <div class="btn-inline-group">
+                        <button type="button" class="btn-default bordered">조회</button>
+                        <button type="button" class="btn-default bordered">셋팅</button>
+                      </div>
                     </div>
-                  </div>
-                </th>
-                <th class="txt-center">설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Server IP 1</th>
-                <td><input type="text" class="input-txt type2"></td>
-                <td rowspan="4" class="explain">
-                  <p>제어기가 Client로 동작 시 서버 IP 주소와 포트 값 설정한다.</p>
-                  <p class="mt10">&lt;기본값&gt;</p>
-                  <ul>
-                    <li>- Server 1 : 192.168.172.155 (Port 35000)</li>
-                    <li>- Server 2 : 192.168.172.156 (Port 35000)</li>
-                  </ul>
-                  <p class="mt10">Transmission Method가 1 또는 2로 설정된 경우, 설정된 IP 주소로 신호등 상태 값이 전송된다</p>
-                </td>
-              </tr>
-              <tr>
-                <th>Server PORT 1</th>
-                <td><input type="text" class="input-txt type2"></td>
-              </tr>
-              <tr>
-                <th>Server IP 2</th>
-                <td><input type="text" class="input-txt type2"></td>
-              </tr>
-              <tr>
-                <th>Server PORT 2</th>
-                <td><input type="text" class="input-txt type2"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- //tbl-bordered -->
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Device ID</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                  <td class="explain">장비의 고유 번호를 설정한다.<br>(범위 0 ~ 65535)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-bordered -->
 
-        <div class="tbl-bordered type2 set-traffic">
-          <table>
-            <colgroup>
-              <col style="width:13%;">
-              <col style="width:65%;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th colspan="2">
-                  <div class="th-bind">
-                    <span>Traffic Signal Request</span>
-                    <div class="btn-inline-group">
-                      <button type="button" class="btn-default bordered">조회</button>
-                      <button type="button" class="btn-default bordered">셋팅</button>
+          <div class="tbl-bordered type2 set-traffic">
+            <table>
+              <colgroup>
+                <col style="width:27%;">
+                <col style="width:29%;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    <div class="th-bind">
+                      <span>Traffic Signal Request</span>
+                      <div class="btn-inline-group">
+                        <button type="button" class="btn-default bordered">셋팅</button>
+                      </div>
                     </div>
-                  </div>
-                </th>
-                <th class="txt-center">설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Traffic Signal Transmission</th>
-                <td><input type="text" class="input-txt type2"></td>
-                <td class="explain">신호등 상태값의 서버 전송 여부를 설정한다(0 : 전송금지, 1 : 전송)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- //tbl-bordered -->
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Traffic Signal Transmission</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                  <td class="explain">신호등 상태값의 서버 전송 여부를 설정한다<br>(0 : 전송금지, 1 : 전송)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-bordered -->
 
-        <div class="tbl-bordered type2 Transmission">
-          <table>
-            <colgroup>
-              <col style="width:13%;">
-              <col style="width:65%;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th colspan="2">
-                  <div class="th-bind">
-                    <span>Transmission Method</span>
-                    <div class="btn-inline-group">
-                      <button type="button" class="btn-default bordered">셋팅</button>
+          <div class="tbl-bordered type2 transmission">
+            <table>
+              <colgroup>
+                <col style="width:23%;">
+                <col style="width:36%;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    <div class="th-bind">
+                      <span>Transmission Method</span>
+                      <div class="btn-inline-group">
+                        <button type="button" class="btn-default bordered">셋팅</button>
+                      </div>
                     </div>
-                  </div>
-                </th>
-                <th class="txt-center">설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Traffic Signal Transmission</th>
-                <td><input type="text" class="input-txt type2"></td>
-                <td class="explain">
-                  <p>신호등 상태정보의 서버 전송 방법을 설정한다.</p>
-                  <ol>
-                    <li>0 : 서버로 전송하지 않음</li>
-                    <li>1 : Method1, 신호등 상태 변경 될 경우 자동 전송</li>
-                    <li>2 : Method2, 100msec 마다 자동으로 신호등 상태 전송</li>
-                  </ol>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- //tbl-bordered -->
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Transmission Method</th>
+                  <td><input type="text" class="input-txt type2"></td>
+                  <td class="explain">
+                    <p>신호등 상태정보의 서버 전송 방법을 설정한다.</p>
+                    <ol>
+                      <li>0 : 서버로 전송하지 않음</li>
+                      <li>1 : Method1, 신호등 상태 변경 될 경우 자동 전송</li>
+                      <li>2 : Method2, 100msec 마다 자동으로 신호등 상태 전송</li>
+                    </ol>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-bordered -->
 
-        <div class="tbl-bordered type2 device-reset">
-          <table>
-            <colgroup>
-              <col style="width:13%;">
-              <col style="width:65%;">
-              <col>
-            </colgroup>
-            <tbody>
-              <tr>
-                <th>Device Reset</th>
-                <td><input type="text" class="input-txt type2"></td>
-                <td class="explain">
-                  <p>원격에서 함체 관리장치를 리셋 하기 위해 사용한다. 명령이 전송 된 후 해당 장비는 10초 이내로 리셋 한다.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="tbl-bordered type2 device-reset">
+            <table>
+              <colgroup>
+                <col style="width:56%;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="2">
+                    <div class="th-bind">
+                      <span>Device Reset</span>
+                      <div class="btn-inline-group">
+                        <button type="button" class="btn-default bordered">Reset</button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <td class="explain">원격에서 함체 관리장치를 리셋 하기 위해 사용한다. 명령이 전송 된 후 해당 장비는 10초 이내로 리셋 한다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-bordered -->
         </div>
-        <!-- //tbl-bordered -->
+        <!-- //inner -->
       </section>
       <!-- //list-type-wrap -->
     </main>
