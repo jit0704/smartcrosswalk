@@ -54,7 +54,11 @@
                 <span class="tit">설정 관리</span>
                 <div class="btn-inline-group">
                   <button type="button" class="btn-download"><span class="hidden">다운로드</span></button>
-                  <button type="button" class="btn-upload"><span class="hidden">업로드</span></button>
+                  <!-- 211102 업로드 버튼 수정 -->
+                  <label for="file-upload" class="btn-upload"> <!-- 업로드 버튼 비활성화 디자인 : disabled 클래스 추가 -->
+                    <input type="file" id="file-upload" class="hidden">
+                    <span class="hidden">업로드</span>
+                  </label>
                   <button type="button" class="btn-delete c-white"><span class="hidden">삭제</span></button>
                   <button type="button" class="btn-save"><span class="hidden">저장</span></button>
                   <button type="button" class="btn-refresh"><span class="hidden">새로고침</span></button>
@@ -114,7 +118,11 @@
                 <span class="tit">학습파일 관리</span>
                 <div class="btn-inline-group">
                   <button type="button" class="btn-download"><span class="hidden">다운로드</span></button>
-                  <button type="button" class="btn-upload"><span class="hidden">업로드</span></button>
+                  <!-- 211102 업로드 버튼 수정 -->
+                  <label for="file-upload" class="btn-upload">
+                    <input type="file" id="file-upload" class="hidden">
+                    <span class="hidden">업로드</span>
+                  </label>
                   <button type="button" class="btn-delete c-white"><span class="hidden">삭제</span></button>
                   <button type="button" class="btn-save"><span class="hidden">저장</span></button>
                   <button type="button" class="btn-refresh"><span class="hidden">새로고침</span></button>

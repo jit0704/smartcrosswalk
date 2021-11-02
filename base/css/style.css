@@ -1483,7 +1483,7 @@ footer .copylight.bg-gray2 {
   background-size: 24px;
 }
 
-.btn-upload:disabled {
+.btn-upload.disabled {
   opacity: 0.3;
 }
 
@@ -3141,7 +3141,7 @@ footer .copylight.bg-gray2 {
 }
 
 .device-highgrade .tbl-bordered {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .device-highgrade .tbl-bordered.set-devicdid .explain {
@@ -3156,7 +3156,6 @@ footer .copylight.bg-gray2 {
 .device-highgrade .tbl-bordered.transmission .explain {
   padding-top: 10px;
   padding-bottom: 10px;
-  letter-spacing: -1px;
 }
 
 .device-highgrade .tbl-bordered.device-reset .explain {
