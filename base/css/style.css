@@ -187,6 +187,10 @@ a, span, em, button, label, i, b, strong {
   margin-bottom: 12px !important;
 }
 
+.ml10 {
+  margin-left: 10px !important;
+}
+
 .ml15 {
   margin-left: 15px !important;
 }
@@ -2479,8 +2483,15 @@ footer .copylight.bg-gray2 {
   margin-left: 10px;
 }
 
+.tbl-bordered.type2 .th-bind .selectbox {
+  margin-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 0;
+}
+
 .tbl-bordered.type2 thead th:first-child {
-  border-right: 1px solid #c4c4c4;
+  border-right: 1px solid transparent;
 }
 
 .tbl-bordered.type2 tbody th {
@@ -3106,6 +3117,114 @@ footer .copylight.bg-gray2 {
   right: 38px;
 }
 
+/* DFS 설정 관리 */
+.dfs .filter-group .bind .tit {
+  font-weight: 700;
+}
+
+.dfs .filter-group .selectbox {
+  background-position-x: 93%;
+}
+
+.dfs .tbl-list-header h2::before {
+  margin-top: -3px;
+}
+
+.dfs .tbl-sticky .tbl-sticky-inner {
+  height: calc(100vh - 302px);
+}
+
+.dfs .tbl-sticky tbody td {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.dfs .tbl-sticky tbody td:not(:first-child) {
+  text-align: left;
+}
+
+.dfs .tbl-sticky tbody td:last-child {
+  padding-left: 35px;
+  color: #0c4670;
+}
+
+.dfs .tbl-sticky tbody td .input-txt {
+  height: 34px;
+}
+
+/* 장비 운영시간 설정 */
+.equi-oper.list-division .ly-left {
+  width: 560px;
+}
+
+.equi-oper.list-division .ly-left .tbl-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: calc(100% - 64px);
+}
+
+.equi-oper.list-division .ly-left .tbl-sticky tbody td {
+  padding: 7.5px 0;
+}
+
+.equi-oper.list-division .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 218px);
+  min-height: 100%;
+}
+
+.equi-oper.list-division .ly-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: calc(100% - 580px);
+  margin-left: 20px;
+}
+
+.equi-oper.list-division .ly-right > .bind {
+  height: 412.5px;
+}
+
+.equi-oper.list-division .ly-right > .bind:first-child .tbl-sticky {
+  padding-bottom: 8px;
+}
+
+.equi-oper.list-division .ly-right > .bind:first-child .tbl-sticky tbody td {
+  padding: 8px 0;
+}
+
+.equi-oper.list-division .ly-right > .bind:first-child .tbl-sticky .selectbox {
+  width: 150px;
+}
+
+.equi-oper.list-division .ly-right .tbl-sticky {
+  height: calc(100% - 64px);
+  min-height: 295px;
+}
+
+.equi-oper.list-division .ly-right .tbl-sticky tbody td a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.equi-oper .tbl-list-header {
+  margin-top: 0;
+}
+
 /* 함체장치 고급 관리 */
 .device-highgrade .filter-group .tit {
   font-weight: 400;
@@ -3160,6 +3279,43 @@ footer .copylight.bg-gray2 {
 
 .device-highgrade .tbl-bordered.device-reset .explain {
   border-left: 1px solid #c4c4c4;
+}
+
+/* 인식SW 설정 정보 관리 */
+.perceive-setup > .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.perceive-setup > .inner .tbl-bordered {
+  -ms-flex-preferred-size: calc(50% - 10px);
+      flex-basis: calc(50% - 10px);
+}
+
+.perceive-setup > .inner .tbl-bordered:nth-child(even) {
+  margin-left: 20px;
+}
+
+.perceive-setup > .inner .tbl-bordered table {
+  height: 100%;
+}
+
+.perceive-setup .tbl-bordered {
+  margin-top: 35px;
+}
+
+.perceive-setup .tbl-bordered .radio-default + .radio-default {
+  margin-left: 20px;
 }
 
 /* help팝업 */
