@@ -43,9 +43,10 @@
                       <th><span style="width:25%"></span></th>
                     </tr>
                   </thead>
+                  <!-- 211108 장비 목록에 a태그추가 -->
                   <tbody>
                     <tr>
-                      <td>DFS</td>
+                      <td><a href="#">DFS</a></td>
                       <td>
                         <label class="chkbox-default">
                           <input type="checkbox" class="hidden">
@@ -63,7 +64,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>음성안내장치</td>
+                      <td><a href="#">음성안내장치</a></td>
                       <td>
                         <label class="chkbox-default">
                           <input type="checkbox" class="hidden">
@@ -81,7 +82,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>집중조명</td>
+                      <td><a href="#">집중조명</a></td>
                       <td>
                         <label class="chkbox-default">
                           <input type="checkbox" class="hidden">
@@ -99,7 +100,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>바닥유도등</td>
+                      <td><a href="#">바닥유도등</a></td>
                       <td>
                         <label class="chkbox-default">
                           <input type="checkbox" class="hidden">
@@ -135,64 +136,61 @@
                 </div>
               </div>
               <!-- //tbl-list-header -->
-              <div class="tbl-sticky type2">
-                <div class="tbl-sticky-inner">
-                  <header class="header-bg"></header>
-                  <table class="tbl-bordered-bot">
-                    <colgroup>
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th><span style="width:16.66%">장비</span></th>
-                        <th><span style="width:16.66%">구분</span></th>
-                        <th><span style="width:16.66%">시작(시)</span></th>
-                        <th><span style="width:16.66%">시작(분)</span></th>
-                        <th><span style="width:16.66%">종료(시)</span></th>
-                        <th><span style="width:16.66%">종료(분)</span></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="#">DFS</a></td>
-                        <td>
-                          <select class="selectbox bordered">
-                            <option>주중</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="selectbox bordered">
-                            <option>00</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="selectbox bordered">
-                            <option>00</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="selectbox bordered">
-                            <option>00</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="selectbox bordered">
-                            <option>00</option>
-                          </select>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <!-- //tbl-bordered-bot -->
-                </div>
-                <!-- //tbl-sticky-inner -->
+
+              <!-- 211108 운영 시간 상세 설정 테이블 단건으로 수정 -->
+              <div class="tbl-bordered type2">
+                <table>
+                  <colgroup>
+                    <col style="width:16.66%">
+                    <col style="width:16.66%">
+                    <col style="width:16.66%">
+                    <col style="width:16.66%">
+                    <col style="width:16.66%">
+                    <col style="width:16.66%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>장비</th>
+                      <th>구분</th>
+                      <th>시작(시)</th>
+                      <th>시작(분)</th>
+                      <th>종료(시)</th>
+                      <th>종료(분)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>DFS</td> <!-- 211108 a태그 삭제 -->
+                      <td>
+                        <select class="selectbox bordered">
+                          <option>주중</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="selectbox bordered">
+                          <option>00</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="selectbox bordered">
+                          <option>00</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="selectbox bordered">
+                          <option>00</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="selectbox bordered">
+                          <option>00</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <!-- //tbl-sticky -->
+              <!-- //tbl-bordered -->
             </div>
             <!-- //bind -->
 
@@ -228,7 +226,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="#">DFS</a></td>
+                        <td>DFS</td> <!-- 211108 a태그 삭제 -->
                         <td>주중</td>
                         <td>00</td>
                         <td>00</td>

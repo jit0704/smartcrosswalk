@@ -2001,6 +2001,13 @@ footer .copylight.bg-gray2 {
   border: 1px solid #c4c4c4;
 }
 
+.selectbox.sm {
+  padding-left: 12px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+}
+
 /* ###############################
     모니터링 우측 컴포넌트
 ################################## */
@@ -3153,8 +3160,17 @@ footer .copylight.bg-gray2 {
 }
 
 /* 장비 운영시간 설정 */
+.equi-oper h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .equi-oper.list-division .ly-left {
   width: 560px;
+}
+
+.equi-oper.list-division .ly-left .tbl-list-header.type2 {
+  height: 41px;
 }
 
 .equi-oper.list-division .ly-left .tbl-sticky {
@@ -3168,15 +3184,20 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  height: calc(100% - 64px);
+  height: calc(100% - 53px);
 }
 
 .equi-oper.list-division .ly-left .tbl-sticky tbody td {
   padding: 7.5px 0;
 }
 
+.equi-oper.list-division .ly-left .tbl-sticky tbody td a {
+  color: #000;
+  text-decoration: underline;
+}
+
 .equi-oper.list-division .ly-left .tbl-sticky-inner {
-  height: calc(100vh - 218px);
+  height: calc(100vh - 213px);
   min-height: 100%;
 }
 
@@ -3195,30 +3216,25 @@ footer .copylight.bg-gray2 {
   margin-left: 20px;
 }
 
-.equi-oper.list-division .ly-right > .bind {
-  height: 412.5px;
+.equi-oper.list-division .ly-right > .bind .tbl-bordered {
+  padding-bottom: 13px;
 }
 
-.equi-oper.list-division .ly-right > .bind:first-child .tbl-sticky {
-  padding-bottom: 8px;
+.equi-oper.list-division .ly-right > .bind .tbl-bordered thead th {
+  text-align: center;
 }
 
-.equi-oper.list-division .ly-right > .bind:first-child .tbl-sticky tbody td {
+.equi-oper.list-division .ly-right > .bind .tbl-bordered tbody td {
   padding: 8px 0;
+  text-align: center;
 }
 
-.equi-oper.list-division .ly-right > .bind:first-child .tbl-sticky .selectbox {
+.equi-oper.list-division .ly-right > .bind .tbl-bordered .selectbox {
   width: 150px;
 }
 
-.equi-oper.list-division .ly-right .tbl-sticky {
-  height: calc(100% - 64px);
-  min-height: 295px;
-}
-
-.equi-oper.list-division .ly-right .tbl-sticky tbody td a {
-  color: #000;
-  text-decoration: underline;
+.equi-oper.list-division .ly-right > .bind .tbl-sticky {
+  height: 600px;
 }
 
 .equi-oper .tbl-list-header {
