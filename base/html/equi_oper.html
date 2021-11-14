@@ -22,7 +22,11 @@
         <div class="list-division equi-oper">
           <div class="ly-left">
             <div class="tbl-list-header type2">
-              <h2>운영 시간 목록</h2>
+              <h2>장비 운영 시간 목록</h2>
+              <div class="btn-inline-group">
+                <button type="button" class="btn-default bordered">삭제</button>
+                <button type="button" class="btn-default bg-blue2">추가</button>
+              </div>
             </div>
             <!-- //tbl-list-header -->
             <div class="tbl-sticky type2">
@@ -30,92 +34,63 @@
                 <header class="header-bg"></header>
                 <table class="tbl-bordered-bot">
                   <colgroup>
-                    <col style="width:45%">
+                    <col style="width:15%">
+                    <col style="width:55%">
                     <col style="width:15%">
                     <col style="width:15%">
-                    <col style="width:25%">
                   </colgroup>
                   <thead>
                     <tr>
-                      <th><span style="width:45%">장비</span></th>
+                      <th><span style="width:15%"></span></th>
+                      <th><span style="width:55%">장비</span></th>
                       <th><span style="width:15%">주중</span></th>
                       <th><span style="width:15%">주말</span></th>
-                      <th><span style="width:25%"></span></th>
                     </tr>
                   </thead>
-                  <!-- 211108 장비 목록에 a태그추가 -->
                   <tbody>
                     <tr>
+                      <td>
+                        <label class="chkbox-default">
+                          <input type="checkbox" class="hidden">
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
                       <td><a href="#">DFS</a></td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <button type="button" class="btn-default bg-blue2">저장</button>
-                      </td>
+                      <td>ON</td>
+                      <td>OFF</td>
                     </tr>
                     <tr>
+                      <td>
+                        <label class="chkbox-default">
+                          <input type="checkbox" class="hidden">
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
                       <td><a href="#">음성안내장치</a></td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <button type="button" class="btn-default bg-blue2">저장</button>
-                      </td>
+                      <td>ON</td>
+                      <td>OFF</td>
                     </tr>
                     <tr>
+                      <td>
+                        <label class="chkbox-default">
+                          <input type="checkbox" class="hidden">
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
                       <td><a href="#">집중조명</a></td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <button type="button" class="btn-default bg-blue2">저장</button>
-                      </td>
+                      <td>ON</td>
+                      <td>OFF</td>
                     </tr>
                     <tr>
+                      <td>
+                        <label class="chkbox-default">
+                          <input type="checkbox" class="hidden">
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
                       <td><a href="#">바닥유도등</a></td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <label class="chkbox-default">
-                          <input type="checkbox" class="hidden">
-                          <span class="txt"><em class="hidden">체크박스</em></span>
-                        </label>
-                      </td>
-                      <td>
-                        <button type="button" class="btn-default bg-blue2">저장</button>
-                      </td>
+                      <td>ON</td>
+                      <td>OFF</td>
                     </tr>
                   </tbody>
                 </table>
@@ -130,75 +105,58 @@
           <div class="ly-right">
             <div class="bind">
               <div class="tbl-list-header type2">
-                <h2>운영 시간 상세 설정 추가</h2>
-                <div class="btn-inline-group">
-                  <button type="button" class="btn-default bg-blue2">추가</button>
-                </div>
+                <h2>장비 주중 주말 설정</h2>
               </div>
               <!-- //tbl-list-header -->
 
-              <!-- 211108 운영 시간 상세 설정 테이블 단건으로 수정 -->
-              <div class="tbl-bordered type2">
-                <table>
-                  <colgroup>
-                    <col style="width:16.66%">
-                    <col style="width:16.66%">
-                    <col style="width:16.66%">
-                    <col style="width:16.66%">
-                    <col style="width:16.66%">
-                    <col style="width:16.66%">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>장비</th>
-                      <th>구분</th>
-                      <th>시작(시)</th>
-                      <th>시작(분)</th>
-                      <th>종료(시)</th>
-                      <th>종료(분)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>DFS</td> <!-- 211108 a태그 삭제 -->
-                      <td>
-                        <select class="selectbox bordered">
-                          <option>주중</option>
-                        </select>
-                      </td>
-                      <td>
-                        <select class="selectbox bordered">
-                          <option>00</option>
-                        </select>
-                      </td>
-                      <td>
-                        <select class="selectbox bordered">
-                          <option>00</option>
-                        </select>
-                      </td>
-                      <td>
-                        <select class="selectbox bordered">
-                          <option>00</option>
-                        </select>
-                      </td>
-                      <td>
-                        <select class="selectbox bordered">
-                          <option>00</option>
-                        </select>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="filter-group type2">
+                <div class="left">
+                  <div class="bind">
+                    <span class="tit">장비 :</span>
+                    <em class="txt">
+                      DFS
+                      <!-- <select class="selectbox bordered" style="width:150px;">
+                        <option>DFS</option>
+                      </select> -->
+                    </em>
+                  </div>
+                  <!-- //bind -->
+                  <div class="bind">
+                    <span class="tit">
+                      <label class="chkbox-default">
+                        <input type="checkbox" class="hidden">
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                    </span>
+                    <em class="txt">주중</em>
+                  </div>
+                  <!-- //bind -->
+                  <div class="bind">
+                    <span class="tit">
+                      <label class="chkbox-default">
+                        <input type="checkbox" class="hidden">
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                    </span>
+                    <em class="txt">주말</em>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //left -->
+                <span class="right btn-inline-group">
+                  <button type="button" class="btn-default bg-blue2">저장</button>
+                </span>
+                <!-- //right -->
               </div>
-              <!-- //tbl-bordered -->
+              <!-- //filter-group -->
             </div>
             <!-- //bind -->
 
             <div class="bind">
-              <div class="tbl-list-header type2">
-                <h2>운영 시간 상세 목록</h2>
+              <div class="tbl-list-header">
+                <h2>장비 운영 시간 상세 설정</h2>
                 <div class="btn-inline-group">
-                  <button type="button" class="btn-default bg-blue2">저장</button>
+                  <button type="button" class="btn-plus"><span class="hidden">테이블 입력영역 추가</span></button> <!-- 버튼 비활성화 : disabled 속성 추가 -->
                 </div>
               </div>
               <!-- //tbl-list-header -->
@@ -207,31 +165,90 @@
                   <header class="header-bg"></header>
                   <table class="tbl-bordered-bot">
                     <colgroup>
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
-                      <col style="width:16.66%">
+                      <col style="width:15.66%">
+                      <col style="width:15.66%">
+                      <col style="width:15.16%">
+                      <col style="width:15.16%">
+                      <col style="width:15.16%">
+                      <col style="width:15.16%">
+                      <col style="width:4%">
+                      <col style="width:4%">
                     </colgroup>
                     <thead>
                       <tr>
-                        <th><span style="width:16.66%">장비</span></th>
-                        <th><span style="width:16.66%">구분</span></th>
-                        <th><span style="width:16.66%">시작(시)</span></th>
-                        <th><span style="width:16.66%">시작(분)</span></th>
-                        <th><span style="width:16.66%">종료(시)</span></th>
-                        <th><span style="width:16.66%">종료(분)</span></th>
+                        <th><span style="width:15.66%">장비</span></th>
+                        <th><span style="width:15.66%">구분</span></th>
+                        <th><span style="width:15.16%">시작(시)</span></th>
+                        <th><span style="width:15.16%">시작(분)</span></th>
+                        <th><span style="width:15.16%">종료(시)</span></th>
+                        <th><span style="width:15.16%">종료(분)</span></th>
+                        <th><span style="width:4%">편집</span></th>
+                        <th><span style="width:4%">삭제</span></th>
                       </tr>
                     </thead>
+                    <!-- 아래 아이콘들 비활성화 : 버튼에 disabled 속성 추가 -->
                     <tbody>
                       <tr>
-                        <td>DFS</td> <!-- 211108 a태그 삭제 -->
+                        <td>DFS</td>
                         <td>주중</td>
                         <td>00</td>
                         <td>00</td>
                         <td>06</td>
                         <td>00</td>
+                        <td>
+                          <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>DFS</td>
+                        <td>주중</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>06</td>
+                        <td>00</td>
+                        <td>
+                          <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-delete type2"><span class="hidden">삭제</span></button>
+                        </td>
+                      </tr>
+                      <tr class="add-row">
+                        <td>DFS</td>
+                        <td>
+                          <select class="selectbox bordered" style="width:80%;">
+                            <option>주중</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="selectbox bordered" style="width:80%;">
+                            <option>00</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="selectbox bordered" style="width:80%;">
+                            <option>00</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="selectbox bordered" style="width:80%;">
+                            <option>00</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="selectbox bordered" style="width:80%;">
+                            <option>00</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-save type2"><span class="hidden">저장</span></button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn-close"><span class="hidden">취소</span></button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

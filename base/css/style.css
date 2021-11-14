@@ -3160,9 +3160,18 @@ footer .copylight.bg-gray2 {
 }
 
 /* 장비 운영시간 설정 */
-.equi-oper h2 {
+.equi-oper .tbl-list-header {
+  margin-top: 5px;
+}
+
+.equi-oper .tbl-list-header h2 {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 5px;
+}
+
+.equi-oper .tbl-list-header .btn-inline-group .btn-default + .btn-default {
+  margin-left: 10px;
 }
 
 .equi-oper.list-division .ly-left {
@@ -3184,7 +3193,7 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  height: calc(100% - 53px);
+  height: calc(100% - 58px);
 }
 
 .equi-oper.list-division .ly-left .tbl-sticky tbody td {
@@ -3197,7 +3206,7 @@ footer .copylight.bg-gray2 {
 }
 
 .equi-oper.list-division .ly-left .tbl-sticky-inner {
-  height: calc(100vh - 213px);
+  height: calc(100vh - 218px);
   min-height: 100%;
 }
 
@@ -3212,8 +3221,47 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  width: calc(100% - 580px);
+  width: calc(100% - 585px);
   margin-left: 20px;
+}
+
+.equi-oper.list-division .ly-right .tbl-list-header {
+  height: 40px;
+  padding-left: 0;
+}
+
+.equi-oper.list-division .ly-right .tbl-list-header h2 {
+  padding-top: 5px;
+}
+
+.equi-oper.list-division .ly-right > .bind .filter-group .left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.equi-oper.list-division .ly-right > .bind .filter-group .left .selectbox {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.equi-oper.list-division .ly-right > .bind .filter-group .left .chkbox-default {
+  vertical-align: top;
+}
+
+.equi-oper.list-division .ly-right > .bind .filter-group .left .tit,
+.equi-oper.list-division .ly-right > .bind .filter-group .left .txt {
+  height: 28px;
+  line-height: 28px;
+}
+
+.equi-oper.list-division .ly-right > .bind .filter-group .left .bind + .bind {
+  margin-left: 70px;
+}
+
+.equi-oper.list-division .ly-right > .bind:last-child .tbl-list-header {
+  margin-top: 13px;
+  padding-right: 12px;
 }
 
 .equi-oper.list-division .ly-right > .bind .tbl-bordered {
@@ -3234,11 +3282,90 @@ footer .copylight.bg-gray2 {
 }
 
 .equi-oper.list-division .ly-right > .bind .tbl-sticky {
-  height: 600px;
+  height: 622px;
 }
 
-.equi-oper .tbl-list-header {
+/* 카메라 관리 */
+.camera-manage .tbl-list-header {
   margin-top: 0;
+}
+
+.camera-manage .tbl-list-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.camera-manage .tbl-list-header .btn-default + .btn-default {
+  margin-left: 10px;
+}
+
+.camera-manage.list-division .ly-left {
+  width: 1000px;
+}
+
+.camera-manage.list-division .ly-left .tbl-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: calc(100% - 58px);
+}
+
+.camera-manage.list-division .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 211px);
+  min-height: 100%;
+}
+
+.camera-manage.list-division .ly-left .tbl-sticky-inner td {
+  cursor: pointer;
+}
+
+.camera-manage.list-division .ly-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: calc(100% - 1020px);
+  margin-left: 20px;
+}
+
+.camera-manage.list-division .ly-right .tbl-border-none {
+  height: 100%;
+  padding: 0;
+}
+
+.camera-manage.list-division .ly-right .tbl-border-none th {
+  padding-left: 24px;
+  font-weight: 700;
+}
+
+.camera-manage.list-division .ly-right .tbl-border-none td {
+  padding: 5px 0;
+}
+
+.camera-manage.list-division .ly-right .tbl-border-none td .selectbox {
+  background-position-x: 97%;
+}
+
+.camera-manage.list-division .ly-right .tbl-border-none td .input-value-group i {
+  margin-top: 0;
+}
+
+.camera-manage.list-division .ly-right > .btn-block {
+  margin-bottom: 3px;
 }
 
 /* 함체장치 고급 관리 */
