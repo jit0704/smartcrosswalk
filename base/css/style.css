@@ -962,9 +962,12 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 89px;
   padding: 5px 0 5px 8px;
   border: 1px solid #0098dd;
   border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .signal-group:first-child {
