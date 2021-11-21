@@ -962,8 +962,8 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 89px;
-  padding: 5px 0 5px 8px;
+  min-width: 50px;
+  padding: 5px 8px;
   border: 1px solid #0098dd;
   border-radius: 50px;
   -webkit-box-sizing: border-box;
@@ -975,10 +975,14 @@ footer .copylight.bg-gray2 {
 }
 
 .signal-group .num {
-  width: 47px;
+  width: 39px;
   text-align: center;
   font-weight: 800;
   color: #fff;
+}
+
+.signal-group .num.w0 {
+  width: 0;
 }
 
 .signal .ly-left {
@@ -2164,6 +2168,14 @@ footer .copylight.bg-gray2 {
   line-height: 50px;
   text-align: center;
   border: 1px solid #c4c4c4;
+}
+
+.facility-botinduce.lg {
+  line-height: 100px;
+}
+
+.facility-botinduce.lg p {
+  font-size: 30px;
 }
 
 .fc-list {
