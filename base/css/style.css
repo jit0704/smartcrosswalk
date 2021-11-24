@@ -504,14 +504,28 @@ footer .copylight.bg-gray2 {
   width: calc(100% - 535px);
 }
 
-.list-division h2,
-.list-division h3 {
+.list-division h2 {
   margin: 18px 0 13px;
   line-height: 18px;
   font-size: 18px;
 }
 
-.list-division h2::before,
+.list-division h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: -5px 5px 0 0;
+  vertical-align: middle;
+  background: #181616;
+}
+
+.list-division h3 {
+  margin: 25px 0 13px;
+  line-height: 18px;
+  font-size: 18px;
+}
+
 .list-division h3::before {
   content: "";
   display: inline-block;
@@ -880,6 +894,14 @@ footer .copylight.bg-gray2 {
   background-image: url(/base/images/ic_doc.png);
 }
 
+.gnb li.hull > a::before {
+  background-image: url(/base/images/ic_hull.png);
+}
+
+.gnb li.cam > a::before {
+  background-image: url(/base/images/ic_cam.png);
+}
+
 .gnb li:hover > a {
   color: #fff;
 }
@@ -1179,6 +1201,9 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .filter-group.type2 .left .bind + .bind {
@@ -2225,6 +2250,10 @@ footer .copylight.bg-gray2 {
   word-wrap: normal;
 }
 
+.fc-list ul li.selected {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 /* 컴포넌트 사이즈 정의 */
 [data-componant="camera-state"] {
   -webkit-box-flex: 1;
@@ -2999,13 +3028,23 @@ footer .copylight.bg-gray2 {
 }
 
 [data-componant="facility-control"] .filter-group .left .txt {
-  line-height: 40px;
+  line-height: 43px;
 }
 
 [data-componant="facility-control"] .filter-group .left .output {
+  min-width: 103px;
+  height: 43px;
   padding: 0 12px;
   line-height: 41px;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #4d85ff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+[data-componant="facility-control"] .filter-group .left .bind:last-child .tit,
+[data-componant="facility-control"] .filter-group .left .bind:last-child .output {
+  vertical-align: middle;
 }
 
 [data-componant="facility-control"] .filter-group .right .btn-default {
