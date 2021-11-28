@@ -3478,6 +3478,111 @@ footer .copylight.bg-gray2 {
   border-left: 1px solid #c4c4c4;
 }
 
+/* 인식SW 카메라 위경도 관리 */
+.camera-coordi {
+  height: 825px;
+}
+
+.camera-coordi .ly-left {
+  width: 1200px;
+}
+
+.camera-coordi .ly-left .video-item {
+  height: 100%;
+  border-width: 1px;
+}
+
+.camera-coordi .ly-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: auto;
+  padding-left: 35px;
+}
+
+.camera-coordi .ly-right > div {
+  margin-bottom: 20px;
+}
+
+.camera-coordi .ly-right .input-txt {
+  text-align: center;
+}
+
+.camera-coordi .channel {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: 1px solid #c4c4c4;
+}
+
+.camera-coordi .channel .left {
+  font-weight: 700;
+}
+
+.camera-coordi .channel .right {
+  margin-left: auto;
+}
+
+.camera-coordi .channel .right .selectbox {
+  min-width: 120px;
+}
+
+.camera-coordi .tbl-bordered {
+  width: 99.99%;
+}
+
+.camera-coordi .tbl-bordered thead th {
+  font-weight: 400;
+}
+
+.camera-coordi .tbl-bordered thead th:first-child {
+  border-top-left-radius: 0;
+}
+
+.camera-coordi .tbl-bordered thead th:last-child {
+  border-top-right-radius: 0;
+}
+
+.camera-coordi .tbl-bordered tbody td {
+  padding: 0 10px;
+}
+
+.camera-coordi .tbl-bordered tbody td .selectbox {
+  margin-right: 5px;
+}
+
+.camera-coordi .tbl-sticky {
+  border-radius: 0;
+}
+
+.camera-coordi .tbl-sticky-inner {
+  height: 454px;
+  border: 1px solid #c4c4c4;
+}
+
+.camera-coordi .tbl-sticky tbody td {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.camera-coordi .tbl-sticky tbody td .selectbox {
+  margin-right: 5px;
+}
+
+.camera-coordi [data-componant="unit1"] {
+  border-radius: 5px 5px 0 0;
+}
+
+.camera-coordi [data-componant="unit1"] .btn-block {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.camera-coordi [data-componant="unit2"] {
+  border-radius: 5px 5px 0 0;
+}
+
 /* 인식SW 설정 정보 관리 */
 .perceive-setup > .inner {
   display: -webkit-box;

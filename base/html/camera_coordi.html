@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>인식SW 카메라 위경도 관리</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" include-html="/base/html/common/header.html"></header>
+    <!-- //header -->
+
+    <main class="container bg-white">
+      <section class="list-division camera-coordi">
+        <div class="ly-left">
+          <div class="video-item">
+            <!-- <video autoplay playsinline controls muted width="100%" height="100%">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+            </video> -->
+            <img src="/base/images/temp/@2200x1816.jpg" alt="퍼블 확인용 더미이미지" style="position:absolute;left:0;top:0;width:100%;height:100%;">
+            <!-- <canvas class="canvas"></canvas> -->
+          </div>
+        </div>
+        <!-- //ly-left -->
+
+        <div class="ly-right">
+          <div class="flexbox channel">
+            <span class="left">채널</span>
+            <div class="right">
+              <select class="selectbox bordered sm">
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+          </div>
+          <!-- //channel -->
+          <div class="unit type2" data-componant="unit1">
+            <header class="unit-header">
+              <span class="tit">카메라 WGS84 위경도 및 각도</span>
+              <button type="button" class="btn-save"><span class="hidden">저장</span></button>
+            </header>
+            <div class="unit-content">
+              <table class="tbl-bordered">
+                <colgroup>
+                  <col style="width:40%;" />
+                  <col style="width:40%;" />
+                  <col style="width:20%;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>위도 정보</th>
+                    <th>경도 정보</th>
+                    <th>각도</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="flexbox">
+                        <select class="selectbox bordered sm" style="width:100%;">
+                          <option>내용1</option>
+                          <option>내용2</option>
+                        </select>
+                        <input type="text" class="input-txt">
+                      </span>
+                    </td>
+                    <td>
+                      <span class="flexbox">
+                        <select class="selectbox bordered sm" style="width:100%;">
+                          <option>내용1</option>
+                          <option>내용2</option>
+                        </select>
+                        <input type="text" class="input-txt">
+                      </span>
+                    </td>
+                    <td><input type="text" class="input-txt"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" class="btn-block c-skyblue">영상 X, Y 설정</button>
+            </div>
+          </div>
+          <!-- //unit -->
+          <div class="unit type2" data-componant="unit2">
+            <header class="unit-header">
+              <button type="button" class="btn-save"><span class="hidden">저장</span></button>
+            </header>
+            <div class="unit-content">
+              <div class="tbl-sticky">
+                <div class="tbl-sticky-inner">
+                  <header class="header-bg"></header>
+                  <table class="tbl-bordered-bot">
+                    <colgroup>
+                      <col style="width:10%;" />
+                      <col style="width:10%;" />
+                      <col style="width:35%;" />
+                      <col style="width:35%;" />
+                      <col style="width:10%;" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th><span style="width:10%;">영상X</span></th>
+                        <th><span style="width:10%;">영상Y</span></th>
+                        <th><span style="width:35%;">WGS84 위도 정보</span></th>
+                        <th><span style="width:35%;">WGS84 경도 정보</span></th>
+                        <th><span style="width:10%;">삭제</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>
+                          <span class="flexbox">
+                            <select class="selectbox bordered sm" style="width:100%;">
+                              <option>내용1</option>
+                              <option>내용2</option>
+                            </select>
+                            <input type="text" class="input-txt">
+                          </span>
+                        </td>
+                        <td>
+                          <span class="flexbox">
+                            <select class="selectbox bordered sm" style="width:100%;">
+                              <option>내용1</option>
+                              <option>내용2</option>
+                            </select>
+                            <input type="text" class="input-txt">
+                          </span>
+                        </td>
+                        <td><button type="button" class="btn-delete"><span class="hidden">삭제</span></button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl-sticky-inner -->
+              </div>
+              <!-- //tbl-sticky -->
+            </div>
+            <!-- //unit-content -->
+          </div>
+          <!-- //unit -->
+        </div>
+        <!-- //ly-right -->
+      </section>
+      <!-- //list-division -->
+    </main>
+    <!-- //container -->
+
+    <footer include-html="/base/html/common/footer2.html"></footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>
