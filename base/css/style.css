@@ -3396,9 +3396,16 @@ footer .copylight.bg-gray2 {
   margin-left: 20px;
 }
 
+.camera-manage.list-division .ly-right .tbl-list-header {
+  margin-bottom: 15px;
+}
+
 .camera-manage.list-division .ly-right .tbl-border-none {
+  position: relative;
   height: 100%;
-  padding: 0;
+  padding: 15px 20px 73px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
 }
 
 .camera-manage.list-division .ly-right .tbl-border-none th {
@@ -3418,8 +3425,12 @@ footer .copylight.bg-gray2 {
   margin-top: 0;
 }
 
-.camera-manage.list-division .ly-right > .btn-block {
-  margin-bottom: 3px;
+.camera-manage.list-division .ly-right .tbl-border-none .btn-block {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 15px;
+  width: calc(100% - 40px);
 }
 
 /* 함체장치 고급 관리 */
@@ -3475,7 +3486,8 @@ footer .copylight.bg-gray2 {
 }
 
 .device-highgrade .tbl-bordered.device-reset .explain {
-  border-left: 1px solid #c4c4c4;
+  padding-top: 0;
+  vertical-align: middle;
 }
 
 /* 인식SW 카메라 위경도 관리 */
@@ -3502,10 +3514,6 @@ footer .copylight.bg-gray2 {
 
 .camera-coordi .ly-right > div {
   margin-bottom: 20px;
-}
-
-.camera-coordi .ly-right .input-txt {
-  text-align: center;
 }
 
 .camera-coordi .channel {
