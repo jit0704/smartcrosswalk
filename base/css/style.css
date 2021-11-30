@@ -3409,11 +3409,13 @@ footer .copylight.bg-gray2 {
 }
 
 .camera-manage.list-division .ly-right .tbl-border-none th {
+  height: 48px;
   padding-left: 24px;
   font-weight: 700;
 }
 
 .camera-manage.list-division .ly-right .tbl-border-none td {
+  height: 48px;
   padding: 5px 0;
 }
 
@@ -3565,7 +3567,7 @@ footer .copylight.bg-gray2 {
 }
 
 .camera-coordi .tbl-sticky-inner {
-  height: 454px;
+  height: 507px;
   border: 1px solid #c4c4c4;
 }
 
@@ -3582,13 +3584,16 @@ footer .copylight.bg-gray2 {
   border-radius: 5px 5px 0 0;
 }
 
-.camera-coordi [data-componant="unit1"] .btn-block {
-  width: 100%;
-  margin-top: 10px;
-}
-
 .camera-coordi [data-componant="unit2"] {
   border-radius: 5px 5px 0 0;
+}
+
+.camera-coordi [data-componant="unit2"] .btn-inline-group .btn-block {
+  padding: 3px 6px;
+  border-radius: 3px;
+  background: #0e2a3e;
+  color: #fff;
+  border: 1px solid #c4c4c4;
 }
 
 /* 인식SW 설정 정보 관리 */
