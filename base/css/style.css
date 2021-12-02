@@ -1084,6 +1084,26 @@ footer .copylight.bg-gray2 {
   background: #0e2a3e;
 }
 
+.unit.type2 .unit-header.bg-white {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.unit.type2 .unit-header.bg-white .tit {
+  color: #181616;
+  font-weight: 700;
+}
+
+.unit.type2 .unit-header.bg-white .tit::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: -3px 10px 0 0;
+  vertical-align: middle;
+  background: #181616;
+}
+
 .unit.type2 .unit-content {
   height: calc(100% - 42px);
 }
@@ -2259,6 +2279,7 @@ footer .copylight.bg-gray2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  max-height: 235px;
   padding: 0 !important;
 }
 
@@ -3589,10 +3610,10 @@ footer .copylight.bg-gray2 {
 }
 
 .camera-coordi [data-componant="unit2"] .btn-inline-group .btn-block {
+  margin-right: 4px;
   padding: 3px 6px;
   border-radius: 3px;
-  background: #0e2a3e;
-  color: #fff;
+  color: #181616;
   border: 1px solid #c4c4c4;
 }
 

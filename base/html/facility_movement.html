@@ -43,7 +43,7 @@
         </div>
         <!-- //tbl-list-header -->
 
-        <!-- 210903 아래 테이블 전체 수정 -->
+        <!-- 211202 테이블 수정 : colgroup width값 수정, td행 모드 추가, 체크박스 추가 -->
         <div class="tbl-sticky type2 is-filter">
           <div class="tbl-sticky-inner">
             <header class="header-bg"></header>
@@ -51,7 +51,8 @@
               <colgroup>
                 <col style="width:14%">
                 <col style="width:14%">
-                <col style="width:44%">
+                <col style="width:32%">
+                <col style="width:12%">
                 <col style="width:22%">
                 <col style="width:2%">
                 <col style="width:4%">
@@ -60,7 +61,8 @@
                 <tr>
                   <th><span style="width:14%">종류</span></th>
                   <th><span style="width:14%">코드</span></th>
-                  <th><span style="width:44%">동작</span></th>
+                  <th><span style="width:32%">동작</span></th>
+                  <th><span style="width:12%">모드</span></th>
                   <th><span style="width:22%">수정일시</span></th>
                   <th><span style="width:2%">편집</span></th>
                   <th><span style="width:4%">삭제</span></th>
@@ -72,6 +74,7 @@
                   <td>바닥유도등</td>
                   <td>code.gl.1</td>
                   <td>소등</td>
+                  <td>상시운영</td>
                   <td>2021-06-07 12:31:33</td>
                   <td>
                     <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
@@ -84,6 +87,7 @@
                   <td>바닥유도등</td>
                   <td>code.gl.1</td>
                   <td>소등</td>
+                  <td>상시운영</td>
                   <td>2021-06-07 12:31:33</td>
                   <td>
                     <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
@@ -105,7 +109,13 @@
                     <input type="text" class="input-txt type2" readonly style="width:180px;">
                   </td>
                   <td>
-                    <input type="text" class="input-txt type2" style="width:750px;">
+                    <input type="text" class="input-txt type2" style="width:100%;">
+                  </td>
+                  <td>
+                    <label class="chkbox-default">
+                      <input type="checkbox" class="hidden">
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
                   </td>
                   <td></td>
                   <td>
@@ -116,7 +126,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="6" class="no-data">조회된 내역이 없습니다.</td>
+                  <td colspan="7" class="no-data">조회된 내역이 없습니다.</td>
                 </tr>
               </tbody>
             </table>
