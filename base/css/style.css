@@ -2987,6 +2987,24 @@ footer .copylight.bg-gray2 {
   background: #0e2a3e;
 }
 
+.monitering .bind-infomation [data-componant="camera-info"] .tbl-border-none {
+  height: 293px;
+  overflow-y: auto;
+}
+
+.monitering .bind-infomation [data-componant="branch-info"] {
+  margin-top: 16px;
+}
+
+.monitering .bind-infomation.type2 [data-componant="camera-info"] .tbl-border-none {
+  height: auto;
+  max-height: 488px;
+}
+
+.monitering .bind-infomation.type2 [data-componant="branch-info"] {
+  display: none;
+}
+
 /* 모니터링 > ROI */
 .roi-vehicle {
   padding: 10px;
@@ -3454,6 +3472,15 @@ footer .copylight.bg-gray2 {
   right: 20px;
   bottom: 15px;
   width: calc(100% - 40px);
+}
+
+/* 함체 장치 관리 */
+.remote-control2.list-division .ly-left {
+  width: 1300px;
+}
+
+.remote-control2.list-division .ly-right {
+  width: calc(100% - 1320px);
 }
 
 /* 함체장치 고급 관리 */

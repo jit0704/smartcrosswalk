@@ -89,98 +89,106 @@
               </table>
             </div>
             <!-- //tbl-border-none -->
-            <div class="unit" data-componant="camera-info">
-              <header class="unit-header">
-                <span class="tit">카메라 정보</span>
-                <button type="button" class="btn-save"><span class="hidden">저장</span></button>
-              </header>
-              <div class="unit-content">
-                <div class="tbl-border-none">
-                  <table>
-                    <colgroup>
-                      <col style="width:30%;">
-                      <col style="width:70%;">
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>채널</th>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <th>IP주소</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                      <tr>
-                        <th>RTSP주소</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                      <tr>
-                        <th>카메라 ID</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                      <tr>
-                        <th>카메라 명</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                      <tr>
-                        <th>카메라 방향</th>
-                        <td>
-                          <select class="selectbox bordered sm" style="width:100%;"> <!-- 211108 sm클래스 추가 -->
-                            <option>북동</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>화면 해상도</th>
-                        <td>
-                          <span class="input-value-group">
-                            <input type="text" class="input-txt">
-                            <i>X</i>
-                            <input type="text" class="input-txt">
-                          </span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+
+            <!-- 211205 bind-infomation div 추가
+              - type2 클래스가 없으면 기본적인 UI로 노출되고 카메라 정보의 데이터가 현재의 개수보다 많이지면 자체 스크롤 생성.
+              - type2 클래스를 추가하면 지점정보를 숨기고 카메라정보의 데이터가 좌측 영상의 높이보다 클경우 자체 스크롤 생성.
+            -->
+            <div class="bind-infomation">
+              <div class="unit" data-componant="camera-info">
+                <header class="unit-header">
+                  <span class="tit">카메라 정보</span>
+                  <button type="button" class="btn-save"><span class="hidden">저장</span></button>
+                </header>
+                <div class="unit-content">
+                  <div class="tbl-border-none">
+                    <table>
+                      <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:70%;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>채널</th>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <th>IP주소</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                        <tr>
+                          <th>RTSP주소</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 ID</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 명</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 방향</th>
+                          <td>
+                            <select class="selectbox bordered sm" style="width:100%;"> <!-- 211108 sm클래스 추가 -->
+                              <option>북동</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>화면 해상도</th>
+                          <td>
+                            <span class="input-value-group">
+                              <input type="text" class="input-txt">
+                              <i>X</i>
+                              <input type="text" class="input-txt">
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //tbl-border-none -->
                 </div>
-                <!-- //tbl-border-none -->
+                <!-- //unit-content -->
               </div>
-              <!-- //unit-content -->
-            </div>
-            <!-- //unit -->
-            <div class="unit" data-componant="branch-info">
-              <header class="unit-header">
-                <span class="tit">지점 정보 (채널 공통)</span>
-                <button type="button" class="btn-save"><span class="hidden">저장</span></button>
-              </header>
-              <div class="unit-content">
-                <div class="tbl-border-none">
-                  <table>
-                    <colgroup>
-                      <col style="width:25%;">
-                      <col style="width:75%;">
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>횡단보도 ID</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                      <tr>
-                        <th>횡단보도 명</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                      <tr>
-                        <th>센터IP</th>
-                        <td><input type="text" class="input-txt"></td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <!-- //unit -->
+              <div class="unit" data-componant="branch-info">
+                <header class="unit-header">
+                  <span class="tit">지점 정보 (채널 공통)</span>
+                  <button type="button" class="btn-save"><span class="hidden">저장</span></button>
+                </header>
+                <div class="unit-content">
+                  <div class="tbl-border-none">
+                    <table>
+                      <colgroup>
+                        <col style="width:25%;">
+                        <col style="width:75%;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>횡단보도 ID</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                        <tr>
+                          <th>횡단보도 명</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                        <tr>
+                          <th>센터IP</th>
+                          <td><input type="text" class="input-txt"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //tbl-border-none -->
                 </div>
-                <!-- //tbl-border-none -->
+                <!-- //unit-content -->
               </div>
-              <!-- //unit-content -->
+              <!-- //unit -->
             </div>
-            <!-- //unit -->
+            <!-- //bind-infomation -->
           </div>
           <!-- //control-content -->
         </article>
