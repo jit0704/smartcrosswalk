@@ -1748,12 +1748,12 @@ footer .copylight.bg-gray2 {
   background: #fff;
 }
 
-.input-txt:-moz-read-only {
-  background: #ECF0F1;
+.input-txt:-moz-read-only, .input-txt:disabled {
+  opacity: 0.6;
 }
 
-.input-txt:read-only {
-  background: #ECF0F1;
+.input-txt:read-only, .input-txt:disabled {
+  opacity: 0.6;
 }
 
 .input-txt.type2 {
@@ -2044,7 +2044,7 @@ footer .copylight.bg-gray2 {
 }
 
 .selectbox:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .selectbox.bordered {
