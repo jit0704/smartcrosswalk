@@ -898,6 +898,10 @@ footer .copylight.bg-gray2 {
   background-image: url(/base/images/ic_hull.png);
 }
 
+.gnb li.hull.type2 > a::before {
+  background-image: url(/base/images/ic_hull2.png);
+}
+
 .gnb li.cam > a::before {
   background-image: url(/base/images/ic_cam.png);
 }
@@ -2676,6 +2680,25 @@ footer .copylight.bg-gray2 {
   padding: 15px 0;
 }
 
+.tbl-celled {
+  border-top: 2px solid #2d85c5;
+}
+
+.tbl-celled th {
+  padding: 10px 0;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  background: #f9fafb;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+}
+
+.tbl-celled td {
+  padding: 10px 15px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+}
+
 /* ###############################
     페이지
 ################################## */
@@ -3726,22 +3749,17 @@ footer .copylight.bg-gray2 {
 
 .help-tab-container {
   margin-top: 10px;
-  padding: 12px 0 12px 16px;
+  padding: 12px 0;
   border: 1px solid #c4c4c4;
 }
 
 .help-tab-content {
   display: none;
-  overflow-y: auto;
   height: 540px;
 }
 
 .help-tab-content.active {
   display: block;
-}
-
-.help-tab-content .swiper-slide {
-  padding-right: 6px;
 }
 
 .help-tab-content .swiper-pagination {
@@ -3767,6 +3785,40 @@ footer .copylight.bg-gray2 {
   bottom: auto;
   z-index: 11;
   margin-top: 0;
+}
+
+.help-tab-content .explain-content {
+  height: 539px;
+  overflow-y: auto;
+  padding: 0 16px;
+}
+
+.help-tab-content .explain-content section + section {
+  margin-top: 15px;
+}
+
+.help-tab-content .explain-content section h3 {
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.help-tab-content .explain-content section > p {
+  line-height: 26px;
+  color: #3c4043;
+}
+
+.help-tab-content .explain-content section .letspc {
+  letter-spacing: -0.5px;
+}
+
+.help-tab-content .explain-content section .tbl-celled {
+  margin-top: 10px;
+  line-height: 21px;
+  color: #3c4043;
+}
+
+.help-tab-content .explain-content section .tbl-celled .order p {
+  padding-left: 20px;
 }
 
 /* 환경설정 */
