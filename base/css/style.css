@@ -183,6 +183,10 @@ a, span, em, button, label, i, b, strong {
   margin-top: 15px !important;
 }
 
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
 .mb12 {
   margin-bottom: 12px !important;
 }
@@ -895,10 +899,16 @@ footer .copylight.bg-gray2 {
 }
 
 .gnb li.hull > a::before {
+  width: 26px;
+  height: 26px;
+  vertical-align: top;
   background-image: url(/base/images/ic_hull.png);
 }
 
 .gnb li.hull.type2 > a::before {
+  width: 26px;
+  height: 26px;
+  vertical-align: top;
   background-image: url(/base/images/ic_hull2.png);
 }
 
@@ -3809,6 +3819,11 @@ footer .copylight.bg-gray2 {
 
 .help-tab-content .explain-content section .letspc {
   letter-spacing: -0.5px;
+}
+
+.help-tab-content .explain-content section .txt-indent-list {
+  padding-left: 25px;
+  line-height: 26px;
 }
 
 .help-tab-content .explain-content section .tbl-celled {

@@ -27,6 +27,7 @@
             <a href="#tab2">음성안내장치</a>
             <a href="#tab3">집중조명</a>
             <a href="#tab4">바닥유도등</a>
+            <a href="#tab5">대화형 디스플레이</a>
           </div>
           <!-- //help-tab-nav -->
           <div class="help-tab-container">
@@ -34,32 +35,241 @@
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    내용1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>VMS 설명</h3>
+                        <p>시각적 메시지를 통해 운전자가 교통신호를 준수할 수 있게 도와주는 시설물</p>
+                        <p>각 상황별로 표출할 메시지를 설정 할 수 있음</p>
+                      </section>
+                      <section>
+                        <h3>시나리오 설명</h3>
+                        <p>0과 1로 각 상황의 발생여부가 표현되는 상황의 집합</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:25%;">
+                            <col style="width:75%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>상황</th>
+                              <th>설명</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>보행신호</td>
+                              <td>보행신호 ON/OFF</td>
+                            </tr>
+                            <tr>
+                              <td>대기자</td>
+                              <td>대기존 대기자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>횡단보도</td>
+                              <td>횡단보도 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>도로</td>
+                              <td>도로 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>정지선침범</td>
+                              <td>차량신호가 적색일 때 차량 정지선 침범 유무</td>
+                            </tr>
+                            <tr>
+                              <td>주의정보</td>
+                              <td>
+                                <ol class="order">
+                                  <li>1. CVIB 일 경우
+                                    <p>- 적색 보행신호의 잔여시간이 5초 이하일 때</p>
+                                    <p>- 녹색 보행신호가 점멸 상태일 때</p>
+                                  </li>
+                                  <li>2. 등기신호일 경우
+                                    <p>- 녹색 보행신호가 점멸 상태일 때</p>
+                                  </li>
+                                </ol>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    내용1-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>VMS 코드 예시</h3>
+                        <p class="letspc">⌨ code.vm.1 = /F0007/E0606/S0800/C1보행자 /C2횡단 /C3안전운전 /C4하세요. /C5차량 /C6정지선 /C7지켜주세요.</p>
+                        <p>⌨ code.vm.2 = /F0007/E0606/S0800/C2보행자가 /C3대기중/C2이니 /C3안전운행/C2해 주세요.</p>
+                        <p>⌨ code.vm.3 = /F0007/E0606/S0800/C4안전운전 /C2하세요. /C3제한 속도/C2를 지켜주세요.</p>
+                        <p>⌨ code.vm.4 = /F0007/E0606/S0800/C2보행자가 /C1보행중/C2이니 /C1주의운전 /C2해주세요.</p>
+                        <p>⌨ code.vm.5 = /F0007/E0606/S0800/C1차량 정지선을 침범/C2하셨습니다. /C1주의 운전/C2해주세요.</p>
+                      </section>
+                      <section>
+                        <h3>VMS 시나리오- CVIB 예시</h3>
+                        <p>🚥 보행신호[ON]  대기자[ON]  횡단보도[ON] 도로[ON] 정지선침범[OFF] 주의정보[ON]</p>
+                        <p>🎬 시나리오 111101</p>
+                        <p>🚥 보행신호[OFF]  대기자[ON]  횡단보도[OFF] 도로[OFF] 정지선침범[OFF] 주의정보[OFF]</p>
+                        <p>🎬 시나리오 010000</p>
+                      </section>
+                      <section>
+                        <h3>VMS 시나리오- 등기신호 예시</h3>
+                        <P>🚥 보행신호[ON]  대기자[ON]  횡단보도[ON]  도로[OFF] 정지선침범[OFF] 보행주의[ON]</P>
+                        <P>🎬 시나리오 111001</P>
+                        <P>🚥 보행신호[ON]  대기자[OFF]  횡단보도[ON]  도로[OFF] 정지선침범[ON] 보행주의[OFF]</P>
+                        <P>🎬 시나리오 101010</P>
+                      </section>
+                      <section>
+                        <h3>VMS 시나리오 – 비신호 예시</h3>
+                        <p>🚥 대기자[ON] 횡단보도[ON] 도로[ON]</p>
+                        <p>🎬 시나리오 111</p>
+                        <p>🚥 대기자[ON] 횡단보도[OFF] 도로[OFF]</p>
+                        <p>🎬 시나리오 100</p>
+                      </section>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                  </div>
-                  <div class="swiper-slide">
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용1-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>VMS 코드 작성 방법 - 상세</h3>
+                        <p>VMS 메시지는 폰트크기, 문자이동효과, 문자속도를 조절할 수 있는 Prefix와 문자색상을 설정하는 코드 및 실제 메시지로 구성되어 있음.</p>
+                        <p>Ex) /F0007/E0606/S1800 문구 앞 Prefix Default</p>
+                        <p class="mt15">/Fxxyy - xx : 00 으로 고정</p>
+                        <p>/Fxxyy - yy : 폰트크기 [픽셀:가로 x 세로]</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:19%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                            <col style="width:9%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>언어 구분</th>
+                              <th>02</th>
+                              <th>03</th>
+                              <th>04</th>
+                              <th>05</th>
+                              <th>06</th>
+                              <th>07</th>
+                              <th>08</th>
+                              <th>~</th>
+                              <th>15</th>
+                            </tr>
+                          </thead>
+                          <tbody class="txt-center">
+                            <tr>
+                              <td>영문자/숫자</td>
+                              <td>06x12</td>
+                              <td>08x16</td>
+                              <td>10x20</td>
+                              <td>12x24</td>
+                              <td>14x28</td>
+                              <td>16x32</td>
+                              <td>18x36</td>
+                              <td>~</td>
+                              <td>32x64</td>
+                            </tr>
+                            <tr>
+                              <td>한국어,중국어</td>
+                              <td>12x12</td>
+                              <td>16x16</td>
+                              <td>20x20</td>
+                              <td>24x24</td>
+                              <td>28x28</td>
+                              <td>32x32</td>
+                              <td>36x36</td>
+                              <td>~</td>
+                              <td>64x64</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p class="mt15">/Exxyy - xxyy : 텍스트가 이동하는 방향을 조절</p>
+                        <table class="tbl-celled mb5">
+                          <colgroup>
+                            <col style="width:16.66%;">
+                            <col style="width:16.66%;">
+                            <col style="width:16.66%;">
+                            <col style="width:16.66%;">
+                            <col style="width:16.66%;">
+                            <col style="width:16.66%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>-</th>
+                              <th>0101</th>
+                              <th>0606</th>
+                              <th>0707</th>
+                              <th>0808</th>
+                              <th>0909</th>
+                            </tr>
+                          </thead>
+                          <tbody class="txt-center">
+                            <td>동작</td>
+                            <td>정지</td>
+                            <td>왼쪽</td>
+                            <td>오른쪽</td>
+                            <td>위쪽</td>
+                            <td>아래쪽</td>
+                          </tbody>
+                        </table>
+                        <p>/Sxxyy - xx : 텍스트가 이동하는 속도를 조절</p>
+                        <ul class="txt-indent-list">
+                          <li>[00/10/20/30/40~99]</li>
+                          <li>문구 입장/퇴장 효과의 수치가 작을수록 상대적으로 속도가 빠름. </li>
+                          <li>좌로 이동하기 효과의 경우“10~15”, 깜박이기 효과의 경우 “40~80”이 적당함</li>
+                        </ul>
+                        <p class="mt15">/Sxxyy - yy : 유지시간  00 으로 고정</p>
+                        <ul class="txt-indent-list">
+                          <li>[00/01/02/03~99 x 0.5초] 예) 04 x 0.5초 = 2초</li>
+                          <li>해당 문구(또는 섹션)가 화면에 나타난 후, 표시를 유지하는 시간. </li>
+                          <li>긴 문구를 좌로 이동하기로 표시할 때, 유지시간은 “00”으로 설정한다</li>
+                        </ul>
+                        <p class="mt15">/Cx - x : 문자색상 표시</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                            <col style="width:12.5%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>무색</th>
+                              <th style="color:red;">빨강</th>
+                              <th style="color:green;">녹색</th>
+                              <th style="color:yellow;">노랑</th>
+                              <th style="color:blue;">파랑</th>
+                              <th style="color:purple;">자주색</th>
+                              <th style="color:skyblue;">하늘색</th>
+                              <th style="color:white;text-shadow:1px 1px 6px #000;">흰색</th>
+                            </tr>
+                          </thead>
+                          <tbody class="txt-center">
+                            <tr>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>5</td>
+                              <td>6</td>
+                              <td>7</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
                   </div>
                 </div>
                 <!-- //swiper-wrapper -->
@@ -75,19 +285,73 @@
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    내용2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>음성안내 장치 설명</h3>
+                        <p>음성안내를 통해 보행자가 교통신호를 준수 할 수 있게 도움을 주는 시설물</p>
+                        <p>코드별로 다른 음성안내를 설정해 시나리오마다 보행자 경고메시지를 다르게 운용 할 수 있음</p>
+                      </section>
+                      <section>
+                        <h3>시나리오 설명</h3>
+                        <p>0과 1로 각 상황의 발생여부가 표현되는 상황의 집합</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:25%;">
+                            <col style="width:75%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>상황</th>
+                              <th>설명</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>보행신호</td>
+                              <td>보행신호 ON/OFF</td>
+                            </tr>
+                            <tr>
+                              <td>횡단보도</td>
+                              <td>횡단보도 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>도로</td>
+                              <td>도로 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>보행주의</td>
+                              <td>녹색 보행신호가 점멸상태일 때</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    내용2-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용2-2<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                  </div>
-                  <div class="swiper-slide">
-                    내용2-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용2-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용2-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용2-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용2-3<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>음성안내 장치 코드 예시</h3>
+                        <p>⌨ code.vg.1  = 다음 신호에 건너세요</p>
+                        <p>⌨ code.vg.2  = 좌우를 살핀 후 건너가십시오</p>
+                        <p>⌨ code.vg.3  = 위험하오니 인도로 이동해 주십시오</p>
+                      </section>
+                      <section>
+                        <h3>음성안내 장치 - 시나리오 CVIB 예시</h3>
+                        <p>🚥 보행신호[ON] 횡단보도[ON]  도로[ON] 보행주의[ON]</p>
+                        <p>🎬 시나리오 1111</p>
+                        <p>🚥 보행신호[ON] 횡단보도[OFF] 도로[OFF] 보행주의[OFF]</p>
+                        <p>🎬 시나리오 1000</p>
+                      </section>
+                      <section>
+                        <h3>음성안내 장치 – 시나리오 등기신호 예시</h3>
+                        <p>🚥 보행신호[ON] 횡단보도[OFF] 도로[ON] 보행주의[OFF]</p>
+                        <p>🎬 시나리오 1010</p>
+                      </section>
+                      <section>
+                        <h3>음성안내 장치 - 시나리오 비신호 예시</h3>
+                        <p>❌ 해당없음</p>
+                      </section>
+                    </div>
                   </div>
                 </div>
                 <!-- //swiper-wrapper -->
@@ -103,11 +367,60 @@
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    내용3-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용3-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용3-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용3-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용3-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>집중조명 설명</h3>
+                        <p>횡단보도를 환하게 밝혀 운전자의 가시거리를 확보하고, 운전자가 먼 거리에서도 횡단보도와 보행자를 쉽게 식별 할 수 있게 도움을 주는 시설물</p>
+                        <p>각 상황 별 집중조명의 밝기를 다르게 설정 할 수 있음</p>
+                      </section>
+                      <section>
+                        <h3>시나리오 설명</h3>
+                        <p>0과 1로 각 상황의 발생여부가 표현되는 상황의 집합</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:25%;">
+                            <col style="width:75%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>상황</th>
+                              <th>설명</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>대기자</td>
+                              <td>대기존 대기자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>횡단보도</td>
+                              <td>횡단보도 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>도로</td>
+                              <td>도로 횡단자 존재 유무</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="explain-content">
+                      <section>
+                        <h3>집중조명 코드 예시</h3>
+                        <p>⌨ code.sl.1  =  50  %</p>
+                        <p>⌨ code.sl.2  =  75  %</p>
+                        <p>⌨ code.sl.3  =  100 %</p>
+                      </section>
+                      <section>
+                        <h3>집중조명 - 시나리오 CVIB / 등기신호 / 비신호 예시</h3>
+                        <p>🚥 대기자[ON]  횡단보도[ON]  도로[ON]</p>
+                        <p>🎬 시나리오 111</p>
+                        <p>🚥 대기자[OFF]  횡단보도[ON]  도로[OFF]</p>
+                        <p>🎬 시나리오 010</p>
+                      </section>
+                    </div>
                   </div>
                 </div>
                 <!-- //swiper-wrapper -->
@@ -123,8 +436,186 @@
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    내용4-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
-                    내용4-1<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>
+                    <div class="explain-content">
+                      <section>
+                        <h3>바닥유도등 설명</h3>
+                        <p>횡단보도 양옆에 유도등을 설치해 야간에 보행자가 횡단보도 영역을 인식할 수 있게 하며, 운전자에게 횡단보도가 있음을 쉽게 식별할 수 있게 도움을 주는 시설물</p>
+                        <p>각 상황 별 동작을 다르게 설정 할 수 있음</p>
+                      </section>
+                      <section>
+                        <h3>시나리오 설명</h3>
+                        <p>0과 1로 각 상황의 발생여부가 표현되는 상황의 집합</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:25%;">
+                            <col style="width:75%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>상황</th>
+                              <th>설명</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>보행신호</td>
+                              <td>보행신호 ON/OFF</td>
+                            </tr>
+                            <tr>
+                              <td>대기자</td>
+                              <td>대기존 대기자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>횡단보도</td>
+                              <td>횡단보도 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>도로</td>
+                              <td>도로 횡단자 존재 유무</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="explain-content">
+                      <section>
+                        <h3>바닥유도등 코드 예시</h3>
+                        <p>⌨ code.gl.1 소등</p>
+                        <p>⌨ code.gl.2 점등</p>
+                        <p>⌨ code.gl.3 점멸(2초)</p>
+                      </section>
+                      <section>
+                        <h3>바닥유도등 – 시나리오 CVIB 예시</h3>
+                        <p>🚥 보행신호[ON] 횡단보도[ON] 도로[ON]</p>
+                        <p>🎬 시나리오 111</p>
+                        <p>🚥 보행신호[ON] 횡단보도[OFF] 도로[OFF]</p>
+                        <p>🎬 시나리오 100</p>
+                      </section>
+                      <section>
+                        <h3>바닥유도등 – 시나리오 등기신호 예시</h3>
+                        <p>🚥 보행신호[ON] 횡단보도[ON] 도로[OFF]</p>
+                        <p>🎬 시나리오 110</p>
+                        <p>🚥 보행신호[ON] 횡단보도[OFF] 도로[ON]</p>
+                        <p>🎬 시나리오 101</p>
+                      </section>
+                      <section>
+                        <h3>바닥유도등 – 시나리오 등기신호 예시</h3>
+                        <p>🚥 대기자[ON] 횡단보도[ON] 도로[OFF]</p>
+                        <p>🎬 시나리오 110</p>
+                        <p>🚥 대기자[ON] 횡단보도[OFF] 도로[ON]</p>
+                        <p>🎬 시나리오 101</p>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+                <!-- //swiper-wrapper -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <!-- //swiper-container -->
+            </div>
+            <!-- //help-tab-content -->
+
+            <div id="tab5" class="help-tab-content">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="explain-content">
+                      <section>
+                        <h3>대화형 디스플레이 설명</h3>
+                        <p>시각적 메시지 또는 이미지를 통해 운전자가 교통신호를 준수할 수 있게 도와주는 시설물</p>
+                        <p>각 상황별로 표출할 메시지를 설정 할 수 있음</p>
+                      </section>
+                      <section>
+                        <h3>시나리오 설명</h3>
+                        <p>0과 1로 각 상황의 발생여부가 표현되는 상황의 집합</p>
+                        <table class="tbl-celled">
+                          <colgroup>
+                            <col style="width:25%;">
+                            <col style="width:75%;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>상황</th>
+                              <th>설명</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>보행신호</td>
+                              <td>보행신호 ON/OFF</td>
+                            </tr>
+                            <tr>
+                              <td>대기자</td>
+                              <td>대기존 대기자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>횡단보도</td>
+                              <td>횡단보도 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>도로</td>
+                              <td>도로 횡단자 존재 유무</td>
+                            </tr>
+                            <tr>
+                              <td>정지선침범</td>
+                              <td>차량신호가 적색일 때 차량 정지선 침범 유무</td>
+                            </tr>
+                            <tr>
+                              <td>주의정보</td>
+                              <td>
+                                <ol class="order">
+                                  <li>1. CVIB 일 경우
+                                    <p>- 적색 보행신호의 잔여시간이 5초 이하일 때</p>
+                                    <p>- 녹색 보행신호가 점멸 상태일 때</p>
+                                  </li>
+                                  <li>2. 등기신호일 경우
+                                    <p>- 녹색 보행신호가 점멸 상태일 때</p>
+                                  </li>
+                                </ol>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="explain-content">
+                      <section>
+                        <h3>대화형 디스플레이 코드 예시</h3>
+                        <p>⌨ code.df.1  = 보행자/보행중+이미지</p>
+                        <p>⌨ code.df.2  = 보행자/주의(점멸)</p>
+                        <p>⌨ code.df.3  = 보행자/대기중</p>
+                        <p>⌨ code.df.4  = 정지선/주의(점멸)</p>
+                        <p>⌨ code.df.5  = 신호/주의(점멸)</p>
+                        <p>⌨ code.df.6  = 안전/운전 + 속도/준수</p>
+                      </section>
+                      <section>
+                        <h3>대화형 디스플레이 시나리오- CVIB 예시</h3>
+                        <p>🚥 보행신호[ON]  대기자[ON]  횡단보도[ON] 도로[ON] 정지선침범[OFF] 주의정보[ON]</p>
+                        <p>🎬 시나리오 111101</p>
+                        <p>🚥 보행신호[OFF]  대기자[ON]  횡단보도[OFF] 도로[OFF] 정지선침범[OFF] 주의정보[OFF]</p>
+                        <p>🎬 시나리오 010000</p>
+                      </section>
+                      <section>
+                        <h3>대화형 디스플레이 시나리오- 등기신호 예시</h3>
+                        <p>🚥 보행신호[ON]  대기자[ON]  횡단보도[ON]  도로[OFF] 정지선침범[OFF] 보행주의[ON]</p>
+                        <p>🎬 시나리오 111001</p>
+                        <p>🚥 보행신호[ON]  대기자[OFF]  횡단보도[ON]  도로[OFF] 정지선침범[ON] 보행주의[OFF]</p>
+                        <p>🎬 시나리오 101010</p>
+                      </section>
+                      <section>
+                        <h3>대화형 디스플레이 시나리오 – 비신호 예시</h3>
+                        <p>🚥 대기자[ON] 횡단보도[ON] 도로[ON]</p>
+                        <p>🎬 시나리오 111</p>
+                        <p>🚥 대기자[ON] 횡단보도[OFF] 도로[OFF]</p>
+                        <p>🎬 시나리오 100</p>
+                      </section>
+                    </div>
                   </div>
                 </div>
                 <!-- //swiper-wrapper -->
