@@ -2245,6 +2245,21 @@ footer .copylight.bg-gray2 {
   font-size: 30px;
 }
 
+.facility-dfs {
+  line-height: 50px;
+  text-align: center;
+  background: #181616;
+  color: #fbff39;
+}
+
+.facility-dfs.lg {
+  line-height: 100px;
+}
+
+.facility-dfs.lg p {
+  font-size: 30px;
+}
+
 .fc-list {
   padding-top: 15px;
 }
@@ -2399,6 +2414,11 @@ footer .copylight.bg-gray2 {
 
 [data-componant="monitering-connect"] .unit-header .switch input:checked + .slider {
   background: #0c4670;
+}
+
+[data-componant="monitering-connect"] .unit-content {
+  height: 729px;
+  overflow-y: auto;
 }
 
 [data-componant="parms-type1"] .flexbox {
