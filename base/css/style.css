@@ -2106,6 +2106,10 @@ footer .copylight.bg-gray2 {
   margin-left: 13px;
 }
 
+.control-header .selectbox:disabled {
+  opacity: 1;
+}
+
 .control-header .switch-group {
   margin-left: auto;
 }
@@ -3594,6 +3598,11 @@ footer .copylight.bg-gray2 {
 .device-highgrade .tbl-bordered.transmission .explain {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.device-highgrade .tbl-bordered.get-sysstatus .explain {
+  padding-top: 0;
+  vertical-align: middle;
 }
 
 .device-highgrade .tbl-bordered.device-reset .explain {
