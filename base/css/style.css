@@ -1572,6 +1572,10 @@ footer .copylight.bg-gray2 {
   background-size: 24px;
 }
 
+.btn-refresh.c-black {
+  background-image: url(/base/images/btn-refresh2.png);
+}
+
 .btn-refresh:disabled {
   opacity: 0.3;
 }
@@ -2398,7 +2402,7 @@ footer .copylight.bg-gray2 {
 }
 
 [data-componant="gumji-info"] .tbl-sticky-inner {
-  height: 549px;
+  height: 541px;
   border: 1px solid #c4c4c4;
   border-bottom: 0;
 }
@@ -4025,7 +4029,7 @@ footer .copylight.bg-gray2 {
   }
   /* 검지정보 > 우측 하단 리스트 */
   [data-componant="gumji-info"] .tbl-sticky-inner {
-    height: 552px;
+    height: 544px;
   }
   /* 연계동작상태 > 우측 하단 리스트 */
   [data-componant="monitering-connect"] {
