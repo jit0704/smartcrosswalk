@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>시설물 제어 관리</title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" include-html="/base/html/common/header.html"></header>
+    <!-- //header -->
+
+    <main class="container bg-white">
+      <section class="list-type-wrap">
+        <div class="filter-group">
+          <div class="bind">
+            <span class="tit">시설물 종류</span>
+            <select class="selectbox bordered" style="width: 180px;"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
+              <option>VMS</option>
+              <option>음성안내장치</option>
+              <option>집중조명</option>
+              <option>바닥유도등</option>
+            </select>
+          </div>
+          <!-- //bind -->
+          <div class="bind">
+            <span class="tit">신호 유형</span>
+            <select class="selectbox bordered" style="width: 180px;"> <!-- 셀렉트박스 비활성화 : disabled 속성 추가 -->
+              <option>신호</option>
+              <option>등기신호</option>
+              <option>비신호</option>
+            </select>
+            <button type="button" class="btn-default bordered">조회</button>
+          </div>
+          <!-- //bind -->
+        </div>
+        <!-- //filter-group -->
+        
+        <div class="list-division" data-componant="facility-admission">
+          <div class="ly-left">
+            <div class="tbl-list-header type2">
+              <h2>시나리오 장비 연동</h2>
+            </div>
+            <!-- //tbl-list-header -->
+            <div class="tbl-sticky type2 is-filter">
+              <div class="tbl-sticky-inner">
+                <header class="header-bg"></header>
+                <table class="tbl-bordered-bot">
+                  <colgroup>
+                    <col style="width:25%" />
+                    <col style="width:25%" />
+                    <col style="width:25%" />
+                    <col style="width:25%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th><span style="width:25%">시설물</span></th>
+                      <th><span style="width:25%">신호 유형</span></th>
+                      <th><span style="width:25%">시나리오</span></th>
+                      <th><span style="width:25%">동작 코드</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>음성안내장치</td>
+                      <td>등기신호</td>
+                      <td>0000</td>
+                      <td>code.vg.1</td>
+                    </tr>
+                    <tr class="selected"> <!-- 선택시 selected 클래스 추가 -->
+                      <td>음성안내장치</td>
+                      <td>등기신호</td>
+                      <td>0000</td>
+                      <td>code.vg.1</td>
+                    </tr>
+                    <tr>
+                      <td>음성안내장치</td>
+                      <td>등기신호</td>
+                      <td>0000</td>
+                      <td>code.vg.1</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- //tbl-bordered-bot -->
+              </div>
+              <!-- //tbl-sticky-inner -->
+            </div>
+            <!-- //tbl-sticky -->
+          </div>
+          <!-- //ly-left -->
+          
+          <div class="ly-right">
+            <div class="tbl-list-header type2">
+              <h2>시나리오 코드 선택</h2>
+              <div class="btn-inline-group">
+                <button type="button" class="btn-default bg-blue2">초기화</button>
+                <button type="button" class="btn-default bg-blue2">코드 적용</button>
+              </div>
+            </div>
+            <!-- //tbl-list-header -->
+            <div class="inner">
+              <div class="tbl-sticky type2">
+                <div class="tbl-sticky-inner">
+                  <header class="header-bg"></header>
+                  <table class="tbl-bordered-bot">
+                    <colgroup>
+                      <col style="width:25%" />
+                      <col style="width:25%" />
+                      <col style="width:25%" />
+                      <col style="width:25%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th><span style="width:25%">시설물</span></th>
+                        <th><span style="width:25%">신호 유형</span></th>
+                        <th><span style="width:25%">시나리오</span></th>
+                        <th><span style="width:25%">현재 동작 코드</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>VMS</td>
+                        <td>CVIB</td>
+                        <td>0011000</td>
+                        <td>code.vm.4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- //tbl-bordered-bot -->
+                </div>
+                <!-- //tbl-sticky-inner -->
+              </div>
+              <!-- //tbl-sticky -->
+
+              <h3>시나리오 항목</h3>
+              <div class="tbl-sticky type2">
+                <div class="tbl-sticky-inner">
+                  <header class="header-bg"></header>
+                  <table class="tbl-bordered-bot">
+                    <colgroup>
+                      <col style="width:14.28%" />
+                      <col style="width:14.28%" />
+                      <col style="width:14.28%" />
+                      <col style="width:14.28%" />
+                      <col style="width:14.28%" />
+                      <col style="width:14.28%" />
+                      <col style="width:14.28%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th><span style="width:14.28%">보행신호</span></th>
+                        <th><span style="width:14.28%">대기</span></th>
+                        <th><span style="width:14.28%">횡단보도</span></th>
+                        <th><span style="width:14.28%">도로</span></th>
+                        <th><span style="width:14.28%">정지선침범</span></th>
+                        <th><span style="width:14.28%">차량주의 운행</span></th>
+                        <th><span style="width:14.28%">보행주의</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>적색</td>
+                        <td>미검지</td>
+                        <td>검지</td>
+                        <td>검지</td>
+                        <td>없음</td>
+                        <td>대기</td>
+                        <td>점멸 아님</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- //tbl-bordered-bot -->
+                </div>
+                <!-- //tbl-sticky-inner -->
+              </div>
+              <!-- //tbl-sticky -->
+
+              <h3>동작 코드 목록</h3>
+              <div class="fc-list">
+                <ul>
+                  <li class="selected">
+                    <span class="code">code.vm.1</span>
+                    <span class="txt">안전운전 캠페인</span>
+                  </li>
+                  <li>
+                    <span class="code">code.vm.2</span>
+                    <span class="txt">대기자 알림, 안전운전 지시</span>
+                  </li>
+                  <li>
+                    <span class="code">code.vm.3</span>
+                    <span class="txt">보행신호 연장 알림, 보행자 존재 알림, 안전운전 지시</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- //fc-list -->
+            </div>
+            <!-- //inner -->
+          </div>
+          <!-- //ly-right -->
+        </div>
+        <!-- //list-division -->
+      </section>
+      <!-- //list-type-wrap -->
+    </main>
+    <!-- //container -->
+
+    <footer include-html="/base/html/common/footer2.html"></footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrapper -->
+</body>
+</html>

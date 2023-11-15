@@ -51,18 +51,20 @@
               <colgroup>
                 <col style="width:14%">
                 <col style="width:14%">
-                <col style="width:32%">
+                <col style="width:22%">
                 <col style="width:12%">
+                <col style="width:10%">
                 <col style="width:22%">
                 <col style="width:2%">
                 <col style="width:4%">
               </colgroup>
               <thead>
                 <tr>
-                  <th><span style="width:14%">종류</span></th>
-                  <th><span style="width:14%">코드</span></th>
-                  <th><span style="width:32%">동작</span></th>
-                  <th><span style="width:12%">모드</span></th>
+                  <th><span style="width:14%">시설물 종류</span></th>
+                  <th><span style="width:14%">동작 코드</span></th>
+                  <th><span style="width:22%">동작 설명</span></th>
+                  <th><span style="width:12%">점멸 여부</span></th>
+                  <th><span style="width:10%">상시 동작</span></th>
                   <th><span style="width:22%">수정일시</span></th>
                   <th><span style="width:2%">편집</span></th>
                   <th><span style="width:4%">삭제</span></th>
@@ -74,7 +76,8 @@
                   <td>바닥유도등</td>
                   <td>code.gl.1</td>
                   <td>소등</td>
-                  <td>상시운영</td>
+                  <td>점멸</td>
+                  <td>상시</td>
                   <td>2021-06-07 12:31:33</td>
                   <td>
                     <button type="button" class="btn-edit"><span class="hidden">편집</span></button>
@@ -87,6 +90,7 @@
                   <td>바닥유도등</td>
                   <td>code.gl.1</td>
                   <td>소등</td>
+                  <td>점멸</td>
                   <td>상시운영</td>
                   <td>2021-06-07 12:31:33</td>
                   <td>
@@ -106,16 +110,26 @@
                     </select>
                   </td>
                   <td>
-                    <input type="text" class="input-txt type2" readonly style="width:180px;">
+                    <input type="text" class="input-txt type2" style="width:180px;">
                   </td>
                   <td>
                     <input type="text" class="input-txt type2" style="width:100%;">
                   </td>
                   <td>
-                    <label class="chkbox-default">
-                      <input type="checkbox" class="hidden">
-                      <span class="txt"><em class="hidden">체크박스</em></span>
-                    </label>
+                    <select class="selectbox bordered" style="min-width:180px;">
+                      <option>선택</option>
+                      <option>내용1</option>
+                      <option>내용2</option>
+                      <option>내용3</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="selectbox bordered" style="min-width:180px;">
+                      <option>선택</option>
+                      <option>내용1</option>
+                      <option>내용2</option>
+                      <option>내용3</option>
+                    </select>
                   </td>
                   <td></td>
                   <td>
@@ -126,7 +140,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="7" class="no-data">조회된 내역이 없습니다.</td>
+                  <td colspan="8" class="no-data">조회된 내역이 없습니다.</td>
                 </tr>
               </tbody>
             </table>
