@@ -2825,7 +2825,10 @@ footer .copylight.bg-gray2 {
   height: calc(100% - 148px);
 }
 [data-componant=facility-kind] .ly-right .scenario-item-container tbody td {
-  padding: 9.55px 0;
+  padding: 9.55px 10px;
+}
+[data-componant=facility-kind] .ly-right .scenario-item-container tbody td .input-txt {
+  text-align: center;
 }
 [data-componant=facility-kind] h3 {
   padding-left: 5px;
